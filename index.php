@@ -3,15 +3,15 @@
 $dev = 0;
 if ($dev == 0) {
   $website = 'http://augustharvest.dev/';
-  $css = 'css/style.css.php';
+  $css = 'css/main.css';
   $js = 'js/main.js';
 } else if ($dev == 1){
   $website = 'http://augustharvest.co.uk.puriena.serveriai.lt/'; 
-  $css = 'http://augustharvest.co.uk.puriena.serveriai.lt/css/style.css.php';
+  $css = 'http://augustharvest.co.uk.puriena.serveriai.lt/css/main.css';
   $js = 'http://augustharvest.co.uk.puriena.serveriai.lt/js/main.js';
 } else if ($dev == 2){
   $website = 'http://www.augustharvest.co.uk/'; 
-  $css = 'http://augustharvest.co.uk/css/style.css.php';
+  $css = 'http://augustharvest.co.uk/css/main.css';
   $js = 'http://augustharvest.co.uk/js/main.js';
 }
 ?>

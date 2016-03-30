@@ -20,7 +20,7 @@ $(document).ready(function() {
 
 	function removeOverlay() {
 			$(document).find('.page-overlay').remove();
-	}	
+	}
 
 	recalculate();	
 
