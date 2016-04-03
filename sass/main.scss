@@ -4,27 +4,8 @@
    August Harvest
    ========================================================================== */
 
-
-$opensans: "Apercu Bold", Calibri, Roboto, sans-serif; // 'Open Sans', sans-serif;
-$apercuLight: "Apercu Light", Calibri, Roboto, sans-serif;
-$garamond: 'EB Garamond', serif;
-$black: #1b0502; //#191212;
-$text-size: 1.6rem;
-
-@mixin keyframes($animationName) {
-    @-webkit-keyframes #{$animationName} {
-        @content;
-    }
-    @-moz-keyframes #{$animationName} {
-        @content;
-    }
-    @-o-keyframes #{$animationName} {
-        @content;
-    }
-    @keyframes #{$animationName} {
-        @content;
-    }
-}
+@import "variables";
+@import "mixin";
 
 @include keyframes(arrow1)
 {

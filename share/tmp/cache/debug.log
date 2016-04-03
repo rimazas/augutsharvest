@@ -1,0 +1,58 @@
+Debug: (2.2000000000078E-5) - (usage: 2960368) - (peak: 2974736)
+C:\www\augustharvest\share\admin\ajax_lock.php
+Debug: (0.001434) - (usage: 2960048) - (peak: 2974736)
+Number of elements: 4
+Array
+(
+    [showtemplate] => false
+    [opt] => setup
+    [_sk_] => acfdb33e03f0aae4
+    [uid] => 1
+)
+
+Debug: (0.00809) - (usage: 3163568) - (peak: 3366400)
+C:\www\augustharvest\share\admin\ajax_lock.php
+Debug: (0.0086970000000001) - (usage: 3163488) - (peak: 3366400)
+Number of elements: 3
+Array
+(
+    [status] => success
+    [lang] => Array
+        (
+            [error_lock_useridmismatch] => Lock is owned by a different user. We cannot manipulate it
+            [error_lock_othererror] => Other/unknown locking error
+            [error_lock_cmslockexception] => Locking exception
+            [error_lock_cmslockownerexception] => Lock is owned by a different user. We cannot manipulate it
+            [error_lock_cmsunlockexception] => Problem removing lock
+            [error_lock_cmsnolockexception] => Could not find a lock with the specified identifiers
+        )
+
+    [uid] => 1
+)
+
+Debug: (1.1000000000011E-5) - (usage: 2960912) - (peak: 2975496)
+C:\www\augustharvest\share\admin\ajax_lock.php
+Debug: (0.00079300000000002) - (usage: 2960816) - (peak: 2975496)
+Number of elements: 7
+Array
+(
+    [showtemplate] => false
+    [opt] => lock
+    [_sk_] => acfdb33e03f0aae4
+    [type] => content
+    [oid] => 11
+    [uid] => 1
+    [lifetime] => 60
+)
+
+Debug: (0.0105) - (usage: 3219808) - (peak: 3421840)
+C:\www\augustharvest\share\admin\ajax_lock.php
+Debug: (0.01163) - (usage: 3219728) - (peak: 3421840)
+Number of elements: 3
+Array
+(
+    [status] => success
+    [lock_id] => 1
+    [lock_expires] => 1459599393
+)
+

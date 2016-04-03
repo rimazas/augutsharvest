@@ -1,0 +1,150 @@
+/* line 5, ../sass/share.scss */
+.uppercase {
+  text-transform: uppercase; }
+
+/* line 8, ../sass/share.scss */
+a {
+  color: #000; }
+  /* line 10, ../sass/share.scss */
+  a:hover {
+    color: #07510a;
+    text-decoration: none; }
+
+/* line 17, ../sass/share.scss */
+.share-page {
+  position: relative;
+  z-index: 0; }
+  /* line 20, ../sass/share.scss */
+  .share-page .wrapper {
+    background-color: #fff;
+    z-index: 1; }
+  /* line 25, ../sass/share.scss */
+  .share-page header .logo {
+    text-align: center;
+    margin: 15px 0 30px;
+    font-weight: 600; }
+    /* line 29, ../sass/share.scss */
+    .share-page header .logo .share {
+      font-size: 8rem;
+      font-family: "EB Garamond", serif; }
+    /* line 33, ../sass/share.scss */
+    .share-page header .logo .by {
+      padding-left: 15px;
+      font-size: 12px;
+      text-transform: uppercase; }
+    /* line 38, ../sass/share.scss */
+    .share-page header .logo .ah {
+      text-transform: uppercase;
+      font-size: 2.2rem;
+      letter-spacing: 4px; }
+  /* line 44, ../sass/share.scss */
+  .share-page header ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0; }
+    /* line 48, ../sass/share.scss */
+    .share-page header ul.menu li {
+      display: inline-block;
+      list-style: none; }
+      /* line 51, ../sass/share.scss */
+      .share-page header ul.menu li:after {
+        padding: 0 10px;
+        content: '/';
+        font-weight: 800;
+        font-size: 1.7rem; }
+      /* line 58, ../sass/share.scss */
+      .share-page header ul.menu li:last-child:after {
+        content: ''; }
+      /* line 62, ../sass/share.scss */
+      .share-page header ul.menu li a {
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-transform: uppercase; }
+  /* line 72, ../sass/share.scss */
+  .share-page .looks .look {
+    margin-bottom: 30px; }
+    /* line 74, ../sass/share.scss */
+    .share-page .looks .look a {
+      display: block;
+      padding: 5px;
+      position: relative; }
+      /* line 79, ../sass/share.scss */
+      .share-page .looks .look a:hover .overlay {
+        display: block; }
+      /* line 83, ../sass/share.scss */
+      .share-page .looks .look a .overlay {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center; }
+        /* line 93, ../sass/share.scss */
+        .share-page .looks .look a .overlay span {
+          color: #fff;
+          font-size: 3rem;
+          font-family: "EB Garamond", serif;
+          text-transform: uppercase;
+          line-height: 25rem; }
+      /* line 101, ../sass/share.scss */
+      .share-page .looks .look a img {
+        border: 1px solid #000;
+        max-width: 100%; }
+  /* line 107, ../sass/share.scss */
+  .share-page .looks .more {
+    text-align: center;
+    margin: 40px 0 70px 0;
+    font-weight: 600; }
+    /* line 111, ../sass/share.scss */
+    .share-page .looks .more a {
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      text-decoration: underline; }
+  /* line 119, ../sass/share.scss */
+  .share-page .footer {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+    font-size: 1.7rem;
+    font-weight: 600; }
+    /* line 124, ../sass/share.scss */
+    .share-page .footer a {
+      text-transform: uppercase; }
+      /* line 127, ../sass/share.scss */
+      .share-page .footer a:last-child:after {
+        content: ''; }
+      /* line 131, ../sass/share.scss */
+      .share-page .footer a:after {
+        padding: 0 10px;
+        content: '/'; }
+  /* line 138, ../sass/share.scss */
+  .share-page footer {
+    z-index: -2;
+    position: relative;
+    height: 500px; }
+    /* line 142, ../sass/share.scss */
+    .share-page footer .wrapper {
+      z-index: -1;
+      background: url("../img/footer-bg.jpg") 50% 0;
+      position: fixed;
+      height: 500px;
+      width: 100%;
+      bottom: 0; }
+      /* line 149, ../sass/share.scss */
+      .share-page footer .wrapper .brand {
+        font-size: 8rem;
+        color: #fff;
+        font-weight: 600;
+        font-family: "Apercu Light", Calibri, Roboto, sans-serif;
+        letter-spacing: 2rem;
+        margin-top: 200px;
+        display: block; }
+      /* line 158, ../sass/share.scss */
+      .share-page footer .wrapper .email {
+        display: block;
+        color: #fff;
+        font-size: 3rem; }
+
+/*# sourceMappingURL=share.css.map */
