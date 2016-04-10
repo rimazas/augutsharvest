@@ -24,6 +24,7 @@
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../vendors/cubeportfolio-jquery-plugin/cubeportfolio/css/cubeportfolio.min.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../bootstrap.3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/share.css"/>
@@ -36,84 +37,132 @@
                     <span class="share">Share</span><span class="by">by</span>
                     <p class="ah">august harvest</p>
                 </div>
-                <ul class="menu">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Formal</a></li>
-                    <li><a href="">Smart-casual</a></li>
-                    <li><a href="">Casual</a></li>
-                    <li><a href="">Festive</a></li>
+                <ul id="js-filters-awesome-work" class="menu">
+                    <li class="cbp-filter-item" data-filter="*">
+                        <a class="filter">Home</a>
+                        <span class="cbp-filter-counter"></span>
+                    </li>
+                    <li class="cbp-filter-item" data-filter=".formal">
+                        <a class="filter">Formal</a>
+                        <span class="cbp-filter-counter"></span>
+                    </li>
+                    <li class="cbp-filter-item" data-filter=".smart-casual">
+                        <a class="filter">Smart-casual</a>
+                        <span class="cbp-filter-counter"></span>
+                    </li>
+                    <li class="cbp-filter-item" data-filter=".casual">
+                        <a class="filter">Casual</a>
+                        <span class="cbp-filter-counter"></span>
+                    </li>
+                    <li class="cbp-filter-item" data-filter=".festive">
+                        <a class="filter">Festive</a>
+                        <span class="cbp-filter-counter"></span>
+                    </li>
                 </ul>
             </header>
 
-            <section class="looks container">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <div class="look">
-                            <a href="#">
-                                <div class="overlay">
-                                    <span>Look #1</span>
-                                </div>
+            <section id="share" class="looks container">
+                <div id="js-grid-awesome-work" class="cbp cbp-l-grid-work">
+                    <div class="cbp-item smart-casual festive">
+                        <a href="looks/look3.html" class="cbp-caption cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption-defaultWrap">
                                 <img src="uploads/images/pop.png" alt=""/>
-                            </a>
-                        </div>
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <span>Look #1</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-xs-4">
-                        <div class="look">
-                            <a href="#">
-                                <div class="overlay">
-                                    <span>Look #1</span>
-                                </div>
-                                <img src="uploads/images/pop.png" alt=""/>
-                            </a>
-                        </div>
+                    <div class="cbp-item formal">
+                        <a href="looks/look1.html" class="cbp-caption cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="http://scriptpie.com/cubeportfolio/img/?i=350x250/4f4e75" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <span>Look #2</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-xs-4">
-                        <div class="look">
-                            <a href="#">
-                                <div class="overlay">
-                                    <span>Look #1</span>
-                                </div>
-                                <img src="uploads/images/pop.png" alt=""/>
-                            </a>
-                        </div>
+                    <div class="cbp-item casual smart-casual">
+                        <a href="looks/look2.html" class="cbp-caption cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="http://scriptpie.com/cubeportfolio/img/?i=350x250/d06583" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <span>Look #3</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-xs-4">
-                        <div class="look">
-                            <a href="#">
-                                <div class="overlay">
-                                    <span>Look #1</span>
-                                </div>
-                                <img src="uploads/images/pop.png" alt=""/>
-                            </a>
-                        </div>
+                    <div class="cbp-item forma festive">
+                        <a href="looks/look4.html" class="cbp-caption cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="http://scriptpie.com/cubeportfolio/img/?i=350x250/53acad" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <span>Look #4</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-xs-4">
-                        <div class="look">
-                            <a href="#">
-                                <div class="overlay">
-                                    <span>Look #1</span>
-                                </div>
-                                <img src="uploads/images/pop.png" alt=""/>
-                            </a>
-                        </div>
+                    <div class="cbp-item formal">
+                        <a href="looks/look5.html" class="cbp-caption cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="http://scriptpie.com/cubeportfolio/img/?i=350x250/55dbc9" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <span>Look #5</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-xs-4">
-                        <div class="look">
-                            <a href="#">
-                                <div class="overlay">
-                                    <span>Look #1</span>
-                                </div>
-                                <img src="uploads/images/pop.png" alt=""/>
-                            </a>
-                        </div>
+                    <div class="cbp-item festive">
+                        <a href="looks/look6.html" class="cbp-caption cbp-singlePage" rel="nofollow">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="http://scriptpie.com/cubeportfolio/img/?i=350x250/4d1f59" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <span>Look #6</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="row more">
-                    <div class="col-xs-">
-                        <a href="#">Load more</a>
-                    </div>
+
+                <div id="js-loadMore-awesome-work" class="cbp-l-loadMore-button more">
+                    <a href="looks/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
+                        <span class="cbp-l-loadMore-defaultText">LOAD MORE</span>
+                        <span class="cbp-l-loadMore-loadingText">LOADING...</span>
+                        <span class="cbp-l-loadMore-noMoreLoading">NO MORE WORKS</span>
+                    </a>
                 </div>
+
+                <!--<div class="clearfix"></div>-->
+                <!--<div class="row more">-->
+                    <!--<div class="col-xs-">-->
+                        <!--<a href="#">Load more</a>-->
+                    <!--</div>-->
+                <!--</div>-->
             </section>
+
+            <section class="container">
+                <!--<div  class="cbp-l-filters-work">-->
+                    <!--<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">-->
+                        <!--SHOW ALL-->
+                    <!--</div>-->
+                    <!--<div data-filter=".identity" class="cbp-filter-item">-->
+                        <!--IDENTITY <div class="cbp-filter-counter"></div>-->
+                    <!--</div>-->
+                    <!--<div data-filter=".web-design" class="cbp-filter-item">-->
+                        <!--WEB DESIGN <div class="cbp-filter-counter"></div>-->
+                    <!--</div>-->
+                    <!--<div data-filter=".graphic" class="cbp-filter-item">-->
+                        <!--GRAPHIC <div class="cbp-filter-counter"></div>-->
+                    <!--</div>-->
+                    <!--<div data-filter=".logos" class="cbp-filter-item">-->
+                        <!--LOGO <div class="cbp-filter-counter"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+            </section>
+
 
             <section class="footer">
                 <div class="container">
@@ -144,8 +193,10 @@
 
     </div>
 
-
-
+    <script src="../js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="../vendors/cubeportfolio-jquery-plugin/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <script src="../vendors/mixitup/build/jquery.mixitup.min.js"></script>
+    <script src="../js/share.js"></script>
 
 </body>
 </html>

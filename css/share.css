@@ -54,24 +54,36 @@ a {
         font-size: 1.7rem; }
       /* line 58, ../sass/share.scss */
       .share-page header ul.menu li:last-child:after {
-        content: ''; }
+        display: none; }
       /* line 62, ../sass/share.scss */
       .share-page header ul.menu li a {
+        cursor: pointer;
         font-size: 1.7rem;
         font-weight: 600;
-        text-transform: uppercase; }
-  /* line 72, ../sass/share.scss */
+        text-transform: uppercase;
+        vertical-align: middle; }
+      /* line 69, ../sass/share.scss */
+      .share-page header ul.menu li span {
+        font-size: 11px;
+        vertical-align: baseline; }
+        /* line 72, ../sass/share.scss */
+        .share-page header ul.menu li span:before {
+          content: '('; }
+        /* line 75, ../sass/share.scss */
+        .share-page header ul.menu li span:after {
+          content: ')'; }
+  /* line 84, ../sass/share.scss */
   .share-page .looks .look {
     margin-bottom: 30px; }
-    /* line 74, ../sass/share.scss */
+    /* line 86, ../sass/share.scss */
     .share-page .looks .look a {
       display: block;
       padding: 5px;
       position: relative; }
-      /* line 79, ../sass/share.scss */
+      /* line 91, ../sass/share.scss */
       .share-page .looks .look a:hover .overlay {
         display: block; }
-      /* line 83, ../sass/share.scss */
+      /* line 95, ../sass/share.scss */
       .share-page .looks .look a .overlay {
         display: none;
         background-color: rgba(0, 0, 0, 0.3);
@@ -82,49 +94,91 @@ a {
         bottom: 0;
         right: 0;
         text-align: center; }
-        /* line 93, ../sass/share.scss */
+        /* line 105, ../sass/share.scss */
         .share-page .looks .look a .overlay span {
           color: #fff;
           font-size: 3rem;
           font-family: "EB Garamond", serif;
           text-transform: uppercase;
           line-height: 25rem; }
-      /* line 101, ../sass/share.scss */
+      /* line 113, ../sass/share.scss */
       .share-page .looks .look a img {
         border: 1px solid #000;
         max-width: 100%; }
-  /* line 107, ../sass/share.scss */
+  /* line 119, ../sass/share.scss */
   .share-page .looks .more {
     text-align: center;
     margin: 40px 0 70px 0;
     font-weight: 600; }
-    /* line 111, ../sass/share.scss */
+    /* line 123, ../sass/share.scss */
     .share-page .looks .more a {
       font-size: 3.5rem;
       text-transform: uppercase;
       text-decoration: underline; }
-  /* line 119, ../sass/share.scss */
+  /* line 136, ../sass/share.scss */
+  .share-page .cbp-item .cbp-item-wrapper {
+    position: relative;
+    padding-bottom: 7px;
+    box-shadow: none;
+    border: 1px solid #000; }
+    /* line 141, ../sass/share.scss */
+    .share-page .cbp-item .cbp-item-wrapper .cbp-caption {
+      position: initial; }
+      /* line 143, ../sass/share.scss */
+      .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover {
+        border-color: transparent; }
+        /* line 145, ../sass/share.scss */
+        .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover .cbp-caption-activeWrap {
+          top: -5px;
+          left: -5px;
+          width: 105%;
+          height: 105%;
+          background-color: rgba(0, 0, 0, 0.3); }
+        /* line 152, ../sass/share.scss */
+        .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover .cbp-caption-defaultWrap {
+          opacity: 1; }
+      /* line 156, ../sass/share.scss */
+      .share-page .cbp-item .cbp-item-wrapper .cbp-caption .cbp-caption-activeWrap {
+        top: 100%;
+        left: 0; }
+        /* line 159, ../sass/share.scss */
+        .share-page .cbp-item .cbp-item-wrapper .cbp-caption .cbp-caption-activeWrap span {
+          position: absolute;
+          top: 50%;
+          text-align: center;
+          width: 100%;
+          color: #fff;
+          font-size: 3rem;
+          margin-top: -1.5rem;
+          font-family: "EB Garamond", serif;
+          text-transform: uppercase; }
+  /* line 175, ../sass/share.scss */
+  .share-page .cbp-l-loadMore-button .cbp-l-loadMore-link,
+  .share-page .cbp-l-loadMore-button .cbp-l-loadMore-button-link {
+    border: none;
+    color: #000; }
+  /* line 182, ../sass/share.scss */
   .share-page .footer {
     padding: 30px 0;
     border-top: 1px solid #ccc;
     font-size: 1.7rem;
     font-weight: 600; }
-    /* line 124, ../sass/share.scss */
+    /* line 187, ../sass/share.scss */
     .share-page .footer a {
       text-transform: uppercase; }
-      /* line 127, ../sass/share.scss */
+      /* line 190, ../sass/share.scss */
       .share-page .footer a:last-child:after {
         content: ''; }
-      /* line 131, ../sass/share.scss */
+      /* line 194, ../sass/share.scss */
       .share-page .footer a:after {
         padding: 0 10px;
         content: '/'; }
-  /* line 138, ../sass/share.scss */
+  /* line 201, ../sass/share.scss */
   .share-page footer {
     z-index: -2;
     position: relative;
     height: 500px; }
-    /* line 142, ../sass/share.scss */
+    /* line 205, ../sass/share.scss */
     .share-page footer .wrapper {
       z-index: -1;
       background: url("../img/footer-bg.jpg") 50% 0;
@@ -132,7 +186,7 @@ a {
       height: 500px;
       width: 100%;
       bottom: 0; }
-      /* line 149, ../sass/share.scss */
+      /* line 212, ../sass/share.scss */
       .share-page footer .wrapper .brand {
         font-size: 8rem;
         color: #fff;
@@ -141,10 +195,91 @@ a {
         letter-spacing: 2rem;
         margin-top: 200px;
         display: block; }
-      /* line 158, ../sass/share.scss */
+      /* line 221, ../sass/share.scss */
       .share-page footer .wrapper .email {
         display: block;
         color: #fff;
         font-size: 3rem; }
+
+/* line 236, ../sass/share.scss */
+.cbp-popup-wrap .main-image img {
+  max-width: 100%; }
+/* line 241, ../sass/share.scss */
+.cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-content {
+  margin-top: initial; }
+/* line 244, ../sass/share.scss */
+.cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation-wrap {
+  position: initial;
+  z-index: 0;
+  height: initial;
+  background-color: transparent; }
+/* line 250, ../sass/share.scss */
+.cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation {
+  position: inherit; }
+  /* line 252, ../sass/share.scss */
+  .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-close {
+    top: 150px;
+    right: 10%;
+    left: inherit;
+    bottom: inherit;
+    background-position: -93px -183px; }
+  /* line 259, ../sass/share.scss */
+  .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-next {
+    left: inherit;
+    right: 10%;
+    background: none;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 36px;
+    color: #666; }
+    /* line 268, ../sass/share.scss */
+    .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-next:before {
+      content: "\f061"; }
+  /* line 272, ../sass/share.scss */
+  .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev {
+    left: 10%;
+    right: initial;
+    background: none;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 36px;
+    color: #666; }
+    /* line 281, ../sass/share.scss */
+    .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev:before {
+      content: "\f060"; }
+/* line 286, ../sass/share.scss */
+.cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text {
+  color: #000; }
+  /* line 288, ../sass/share.scss */
+  .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text h1 {
+    font-weight: 600; }
+  /* line 291, ../sass/share.scss */
+  .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text p {
+    font-size: 18px;
+    font-weight: 600; }
+  /* line 295, ../sass/share.scss */
+  .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text a {
+    text-decoration: underline; }
+/* line 300, ../sass/share.scss */
+.cbp-popup-wrap .logo {
+  text-align: center;
+  margin: 15px 0 30px;
+  font-weight: 600; }
+  /* line 304, ../sass/share.scss */
+  .cbp-popup-wrap .logo .share {
+    font-size: 8rem;
+    font-family: "EB Garamond", serif; }
+  /* line 308, ../sass/share.scss */
+  .cbp-popup-wrap .logo .by {
+    padding-left: 15px;
+    font-size: 12px;
+    text-transform: uppercase; }
+  /* line 313, ../sass/share.scss */
+  .cbp-popup-wrap .logo .ah {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing: 4px; }
 
 /*# sourceMappingURL=share.css.map */
