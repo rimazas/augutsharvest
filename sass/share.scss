@@ -1,4 +1,5 @@
 
+@import "breakpoint";
 @import "variables";
 
 
@@ -11,45 +12,93 @@ a {
     color: #07510a;
     text-decoration: none;
   }
+  &:focus {
+    color: #000;
+  }
 }
 
+@mixin logo {
+  text-align: center;
+  margin: 8px 0 40px;
+  font-weight: 600;
+  .share {
+    font-size: 8rem;
+    font-family: $garamond;
+    position: relative;
+    line-height: 10rem;
+  }
+  .by {
+    padding-left: 15px;
+    font-size: 18px;
+    font-family: $apercuLight;
+    text-transform: uppercase;
+    bottom: -12px;
+    position: absolute;
+    right: -40px;
+  }
+  .ah {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 7px;
+  }
+  .share-logo {
+    margin: 50px 0 15px;
+    img {
+      width: 240px;
+    }
+  }
+}
 
 .share-page {
+  font-family: $apercu;
+  &:before {
+//    content: '';
+//    background-image: url('../img/share_harvest.jpg');
+//    background-size: contain;
+//    width: 1400px;
+//    height: 1770px;
+//    opacity: 0.1;
+//    position: absolute;
+//    background-position: -3px 0;
+//    left: 50%;
+//    margin-left: -700px;
+//    z-index: -1;
+  }
   position: relative;
   z-index: 0;
+  color: #000;
   .wrapper {
     background-color: #fff;
     z-index: 1;
   }
   header {
     .logo {
-      text-align: center;
-      margin: 15px 0 30px;
-      font-weight: 600;
-      .share {
-        font-size: 8rem;
-        font-family: $garamond;
-      }
-      .by {
-        padding-left: 15px;
-        font-size: 12px;
-        text-transform: uppercase;
-      }
-      .ah {
-        text-transform: uppercase;
-        font-size: 2.2rem;
-        letter-spacing: 4px;
-      }
+      @include logo;
+    }
+    .menu-wrapper {
+      height: 70px;
     }
     ul.menu {
       list-style: none;
-      padding: 0;
-      margin: 30px 0;
+      margin: 0;
+      padding: 12px 0;
+      text-align: center;
+      @include breakpoint($screen-xs) {
+        text-align: left;
+      }
+      &.fixed {
+        position: fixed;
+        top: 0;
+        background: rgba(#fff,0.9);
+        width: 95%;
+        z-index: 2;
+        transition: all 0.5s;
+      }
       li {
         display: inline-block;
         list-style: none;
         &:after {
-          padding: 0 10px;
+          padding: 0 3px;
           content: '/';
           font-weight: 800;
           font-size: 1.7rem;
@@ -65,6 +114,7 @@ a {
           font-weight: 600;
           text-transform: uppercase;
           vertical-align: middle;
+          letter-spacing: 3px;
         }
         span {
           font-size: 11px;
@@ -118,12 +168,15 @@ a {
     }
     .more {
       text-align: center;
-      margin: 40px 0 70px 0;
+      margin: 60px 0;
       font-weight: 600;
       a {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
         text-transform: uppercase;
         text-decoration: underline;
+      }
+      span {
+       letter-spacing: 4px;
       }
     }
   }
@@ -157,25 +210,29 @@ a {
           top: 100%;
           left: 0;
           span {
-            $fs: 3rem;
+            $fs: 4.5rem;
             position: absolute;
             top: 50%;
             text-align: center;
             width: 100%;
             color: #fff;
             font-size: $fs;
-            margin-top: -($fs/2);
-            font-family: $garamond;
+            margin-top: -($fs/2 + $fs/4);
+            font-weight: 600;
+            font-family: $font-helvetica;
             text-transform: uppercase;
           }
         }
       }
     }
   }
+
   .cbp-l-loadMore-button .cbp-l-loadMore-link,
   .cbp-l-loadMore-button .cbp-l-loadMore-button-link {
     border: none;
     color: #000;
+    margin-top: 0;
+    font-weight: 800;
   }
 
 
@@ -186,6 +243,7 @@ a {
     font-weight: 600;
     a {
       text-transform: uppercase;
+      letter-spacing: 2px;
       &:last-child {
         &:after {
           content: '';
@@ -196,26 +254,42 @@ a {
         content: '/';
       }
     }
+    .copyright {
+      span {
+        letter-spacing: 2px;
+      }
+    }
+    a {
+      color: #000;
+      &:hover, &:focus, &:active {
+        color: #000;
+        text-decoration: none;
+      }
+    }
   }
 
   footer {
+    $height: 435px;
     z-index: -2;
     position: relative;
-    height: 500px;
+    height: $height;
     .wrapper {
       z-index: -1;
-      background: url("../img/footer-bg.jpg") 50% 0;
+      background: url("../img/footer_bg2.jpg") 50% 0 #ebf2f8;
+      background-size: contain;
+      background-repeat: no-repeat;
       position: fixed;
-      height: 500px;
+      height: $height;
       width: 100%;
       bottom: 0;
       .brand {
-        font-size: 8rem;
+        font-size: 7.5rem;
+        line-height: 7.5rem;
         color: #fff;
         font-weight: 600;
-        font-family: $apercuLight;
+        font-family: $apercu;
         letter-spacing: 2rem;
-        margin-top: 200px;
+        margin-top: 205px;
         display: block;
       }
       .email {
@@ -250,11 +324,12 @@ a {
     .cbp-popup-navigation {
       position: inherit;
       .cbp-popup-close {
-        top: 150px;
+        top: 188px;
         right: 10%;
         left: inherit;
         bottom: inherit;
         background-position: -93px -183px;
+        z-index: 1;
       }
       .cbp-popup-next {
         left: inherit;
@@ -265,6 +340,7 @@ a {
         -webkit-font-smoothing: antialiased;
         font-size: 36px;
         color: #666;
+        z-index: 1;
         &:before {
           content: "\f061";
         }
@@ -278,6 +354,7 @@ a {
         -webkit-font-smoothing: antialiased;
         font-size: 36px;
         color: #666;
+        z-index: 1;
         &:before {
           content: "\f060";
         }
@@ -294,26 +371,63 @@ a {
       }
       a {
         text-decoration: underline;
+        color: #000;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    .social {
+      a {
+        color: #000;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    .social {
+      margin-top: 200px;
+      .icons {
+        margin-bottom: 20px;
+        a {
+          display: inline-block;
+          margin-right: 10px;
+          i {
+            font-size: 30px;
+          }
+        }
+      }
+      .homelink {
+        display: inline-block;
+        color: #07510a;
+        font-weight: 600;
+        font-size: 14px;
+        &:hover {
+          color: #07510a;
+        }
       }
     }
   }
   .logo {
-    text-align: center;
-    margin: 15px 0 30px;
-    font-weight: 600;
-    .share {
-      font-size: 8rem;
-      font-family: $garamond;
-    }
-    .by {
-      padding-left: 15px;
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-    .ah {
-      text-transform: uppercase;
-      font-size: 2.2rem;
-      letter-spacing: 4px;
-    }
+    @include logo;
   }
+}
+
+.cbp:after, .cbp-lazyload:after, .cbp-popup-loadingBox:after, .cbp-popup-singlePageInline:after {
+  content: '';
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-animation: cbp-rotation .8s infinite linear;
+  animation: cbp-rotation .8s infinite linear;
+  border-left: 3px solid rgba(114, 144, 182, 0.15);
+  border-right: 3px solid rgba(114, 144, 182, 0.15);
+  border-bottom: 3px solid rgba(114, 144, 182, 0.15);
+  border-top: 3px solid rgba(#000000, 0.8);
+  border-radius: 100%;
 }

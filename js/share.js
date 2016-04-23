@@ -6,7 +6,7 @@ $(function(){
         loadMoreAction: 'click',
         layoutMode: 'grid',
         defaultFilter: '*',
-        animationType: 'scaleSides',
+        animationType: 'fadeOut',
         gapHorizontal: 30,
         gapVertical: 30,
         gridAdjustment: 'responsive',
@@ -49,7 +49,19 @@ $(function(){
                 .fail(function() {
                     t.updateSinglePage('AJAX Error! Please refresh the page!');
                 });
-        },
+        }
+    });
+
+    $(document).scroll(function() {
+
+        var scroll = $(window).scrollTop();
+        console.log(scroll);
+        if (scroll > 205) {
+            $('.menu').addClass('fixed');
+        } else {
+            $('.menu').removeClass('fixed');
+        }
+
     });
 
 });
