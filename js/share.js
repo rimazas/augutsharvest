@@ -52,16 +52,29 @@ $(function(){
         }
     });
 
-    $(document).scroll(function() {
+    var timer;
 
-        var scroll = $(window).scrollTop();
-        console.log(scroll);
-        if (scroll > 205) {
-            $('.menu').addClass('fixed');
-        } else {
-            $('.menu').removeClass('fixed');
-        }
+    $(window).scroll(function() {
 
+        //if ( timer ) clearTimeout(timer);
+        //timer = setTimeout(function(){
+        //    scrolling();
+        //}, 500);
+
+        scrolling();
     });
+
+    function scrolling() {
+        var scroll = $(window).scrollTop();
+        var menuHeight = $('.menu-wrapper').height();
+        $('.placeholder').css('height', menuHeight);
+        if (scroll > 190) {
+            $('.menu-wrapper').addClass('fixed');
+            $('.placeholder').show();
+        } else {
+            $('.menu-wrapper').removeClass('fixed');
+            $('.placeholder').hide();
+        }
+    }
 
 });

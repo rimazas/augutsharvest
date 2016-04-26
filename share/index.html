@@ -7,19 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta property="og:url" content="http://augustharvest.co.uk/share/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AUGUST HARVEST">
-    <meta property="og:description" content="A menswear personal shopper based in London, who is harvesting all year round to find the best hidden gems amongst the online stores, sample sales, designer brands and high street shops.">
-    <meta property="og:image" content="<?php echo $website ?>img/fb_share.png">
+    <meta property="og:title" content="Share by August Harvest">
+    <meta property="og:description" content="Evolve your style with a regularly updated selection of outfits from a menswear personal shopper.">
+    <meta property="og:image" content="/share/uploads/share/fbshare.png">
 
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:site" content="@August_Harvest" />
-    <meta name="twitter:title" content="AUGUST HARVEST" />
-    <meta name="twitter:image" content="http://augustharvest.co.uk/share/img/share_twitter.png" />
+    <meta name="twitter:title" content="Share by August Harvest" />
+    <meta name="twitter:image" content="/share/uploads/share/sharetwitter.png" />
     <meta name="twitter:url" content="http://augustharvest.co.uk/share/" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="share_favicon.png">
-    <link rel="apple-touch-icon" href="../img/app.png">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="/share/uploads/share/share_app.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/share/uploads/share/share_1.png">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
@@ -28,34 +30,53 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../bootstrap.3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/share.css"/>
+    <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        var html = document.getElementsByTagName('html')[0];
+        html.className += '  wf-loading';
+        setTimeout(function() {
+            html.className = html.className.replace(' wf-loading', '');
+        }, 2000);
+        WebFontConfig = { fontdeck: { id: '59462' } };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
 </head>
 <body>
     <div class="share-page">
         <div class="wrapper">
             <header class="container">
                 <div class="logo">
-                    <div class="share-logo"><img src="../img/logo.png" alt="Share"/></div>
-                    <!--<span class="share">Share<span class="by">by</span></span>-->
-                    <p class="ah">august harvest</p>
+                    <div class="share-logo"><img src="../img/share_logo.png" alt="Share"/></div>
                 </div>
+                <div class="placeholder"></div>
                 <div class="menu-wrapper">
-                    <ul id="js-filters-awesome-work" class="menu">
-                        <li class="cbp-filter-item" data-filter="*">
-                            <a class="filter">Home</a>
-                        </li>
-                        <li class="cbp-filter-item" data-filter=".formal">
-                            <a class="filter">Formal</a>
-                        </li>
-                        <li class="cbp-filter-item" data-filter=".smart-casual">
-                            <a class="filter">Smart-casual</a>
-                        </li>
-                        <li class="cbp-filter-item" data-filter=".casual">
-                            <a class="filter">Casual</a>
-                        </li>
-                        <li class="cbp-filter-item" data-filter=".festive">
-                            <a class="filter">Festive</a>
-                        </li>
-                    </ul>
+                    <div class="container">
+                        <ul id="js-filters-awesome-work" class="menu">
+                            <li class="cbp-filter-item" data-filter="*">
+                                <a class="filter">Home</a>
+                            </li>
+                            <li class="cbp-filter-item" data-filter=".formal">
+                                <a class="filter">Formal</a>
+                            </li>
+                            <li class="cbp-filter-item" data-filter=".smart-casual">
+                                <a class="filter">Smart-casual</a>
+                            </li>
+                            <li class="cbp-filter-item" data-filter=".casual">
+                                <a class="filter">Casual</a>
+                            </li>
+                            <li class="cbp-filter-item" data-filter=".festive">
+                                <a class="filter">Festive</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </header>
 
@@ -156,7 +177,7 @@
                 <div id="js-loadMore-awesome-work" class="cbp-l-loadMore-button more">
                     <a href="looks/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
                         <span class="cbp-l-loadMore-defaultText">LOAD MORE</span>
-                        <span class="cbp-l-loadMore-loadingText">LOAD MORE</span>
+                        <span class="cbp-l-loadMore-loadingText"></span>
                     </a>
                 </div>
 
@@ -194,11 +215,11 @@
             <section class="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-6 copyright">
+                        <div class="col-xs-12 col-sm-6 copyright">
                             <span class="uppercase">&copy; AUGUST HARVEST psm.</span>
                             <span>All rights reserved.</span>
                         </div>
-                        <div class="col-xs-6 text-right">
+                        <div class="col-xs-12 col-sm-6 social-links">
                             <a href="https://twitter.com/August_Harvest" target="_blank" rel="nofollow">Twitter</a>
                             <a href="http://www.instagram.com/august_harvest" target="_blank" rel="nofollow">Instagram</a>
                             <a href="https://www.linkedin.com/in/augustharvest" target="_blank" rel="nofollow">Linkedin

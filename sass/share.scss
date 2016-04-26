@@ -19,18 +19,18 @@ a {
 
 @mixin logo {
   text-align: center;
-  margin: 8px 0 40px;
+  margin: 8px 0 30px;
   font-weight: 600;
   .share {
     font-size: 8rem;
-    font-family: $garamond;
+    font-family: $apercu;
     position: relative;
     line-height: 10rem;
   }
   .by {
     padding-left: 15px;
     font-size: 18px;
-    font-family: $apercuLight;
+    font-family: $apercu;
     text-transform: uppercase;
     bottom: -12px;
     position: absolute;
@@ -42,7 +42,7 @@ a {
     letter-spacing: 7px;
   }
   .share-logo {
-    margin: 50px 0 15px;
+    margin: 50px 0 11px;
     img {
       width: 240px;
     }
@@ -75,24 +75,43 @@ a {
     .logo {
       @include logo;
     }
+    .placeholder {
+      display: none;
+    }
     .menu-wrapper {
-      height: 70px;
+//      height: 70px;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      margin-bottom: 20px;
+      .container {
+        padding: 0 10px
+      }
+      &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(#fff,0.9);
+        width: 100%;
+        z-index: 2;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        .container {
+          padding: 0 25px;
+        }
+      }
     }
     ul.menu {
       list-style: none;
       margin: 0;
       padding: 12px 0;
       text-align: center;
+      z-index: 2;
       @include breakpoint($screen-xs) {
         text-align: left;
-      }
-      &.fixed {
-        position: fixed;
-        top: 0;
-        background: rgba(#fff,0.9);
-        width: 95%;
-        z-index: 2;
-        transition: all 0.5s;
       }
       li {
         display: inline-block;
@@ -210,7 +229,7 @@ a {
           top: 100%;
           left: 0;
           span {
-            $fs: 4.5rem;
+            $fs: 4.8rem;
             position: absolute;
             top: 50%;
             text-align: center;
@@ -219,8 +238,9 @@ a {
             font-size: $fs;
             margin-top: -($fs/2 + $fs/4);
             font-weight: 600;
-            font-family: $font-helvetica;
+            font-family: $apercu;
             text-transform: uppercase;
+            letter-spacing: 5px;
           }
         }
       }
@@ -246,7 +266,7 @@ a {
       letter-spacing: 2px;
       &:last-child {
         &:after {
-          content: '';
+          display: none;
         }
       }
       &:after {
@@ -255,8 +275,20 @@ a {
       }
     }
     .copyright {
+      text-align: center;
+      margin-bottom: 10px;
+      @include breakpoint($screen-sm) {
+        text-align: left;
+        margin-bottom: 0;
+      }
       span {
         letter-spacing: 2px;
+      }
+    }
+    .social-links {
+      text-align: center;
+      @include breakpoint($screen-sm) {
+        text-align: right;
       }
     }
     a {
@@ -306,6 +338,7 @@ a {
 }
 
 .cbp-popup-wrap {
+  font-family: $apercu;
   .main-image {
     img{
       max-width: 100%;
@@ -314,6 +347,7 @@ a {
   &.cbp-popup-singlePage {
     .cbp-popup-content {
       margin-top: initial;
+      width: 70%;
     }
     .cbp-popup-navigation-wrap {
       position: initial;
@@ -333,37 +367,40 @@ a {
       }
       .cbp-popup-next {
         left: inherit;
-        right: 10%;
-        background: none;
-        font: normal normal normal 14px/1 FontAwesome;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-size: 36px;
-        color: #666;
+        right: 5%;
         z-index: 1;
-        &:before {
-          content: "\f061";
-        }
+        background: url("../img/cbp-sprite.png") no-repeat scroll -46px -92px rgba(#ccc, 1);
+//        background: none;
+//        font: normal normal normal 14px/1 FontAwesome;
+//        text-rendering: auto;
+//        -webkit-font-smoothing: antialiased;
+//        font-size: 36px;
+//        color: #666;
+//        &:before {
+//          content: "\f061";
+//        }
       }
       .cbp-popup-prev {
-        left: 10%;
+        background: url("../img/cbp-sprite.png") no-repeat scroll 0 -92px rgba(#ccc, 1);
+        left: 5%;
         right: initial;
-        background: none;
-        font: normal normal normal 14px/1 FontAwesome;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-size: 36px;
-        color: #666;
         z-index: 1;
-        &:before {
-          content: "\f060";
-        }
+//        background: none;
+//        font: normal normal normal 14px/1 FontAwesome;
+//        text-rendering: auto;
+//        -webkit-font-smoothing: antialiased;
+//        font-size: 36px;
+//        color: #666;
+//        &:before {
+//          content: "\f060";
+//        }
       }
     }
     .cbp-l-project-desc-text {
       color: #000;
       h1 {
         font-weight: 600;
+        margin-top: 0;
       }
       p {
         font-size: 18px;
@@ -386,7 +423,9 @@ a {
       }
     }
     .social {
-      margin-top: 200px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
       .icons {
         margin-bottom: 20px;
         a {

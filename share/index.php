@@ -72,6 +72,8 @@ $trycount = 0;
 cms_content_cache::get_instance();
 $_tpl_cache = new CmsTemplateCache();
 
+$ISMOK_PROGRAMUOTI;
+
 while( $trycount < 2 ) {
     $trycount++;
     try {
