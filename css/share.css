@@ -1,40 +1,241 @@
-/* line 6, ../sass/share.scss */
+@-webkit-keyframes arrow1 {
+  0% {
+    bottom: 0;
+    opacity: 0; }
+  10% {
+    bottom: 0;
+    opacity: 0; }
+  90% {
+    bottom: 0;
+    opacity: 0; }
+  100% {
+    bottom: 35%;
+    opacity: 1; } }
+@-moz-keyframes arrow1 {
+  0% {
+    bottom: 0;
+    opacity: 0; }
+  10% {
+    bottom: 0;
+    opacity: 0; }
+  90% {
+    bottom: 0;
+    opacity: 0; }
+  100% {
+    bottom: 35%;
+    opacity: 1; } }
+@-o-keyframes arrow1 {
+  0% {
+    bottom: 0;
+    opacity: 0; }
+  10% {
+    bottom: 0;
+    opacity: 0; }
+  90% {
+    bottom: 0;
+    opacity: 0; }
+  100% {
+    bottom: 35%;
+    opacity: 1; } }
+@keyframes arrow1 {
+  0% {
+    bottom: 0;
+    opacity: 0; }
+  10% {
+    bottom: 0;
+    opacity: 0; }
+  90% {
+    bottom: 0;
+    opacity: 0; }
+  100% {
+    bottom: 35%;
+    opacity: 1; } }
+@-webkit-keyframes arrow2 {
+  0% {
+    bottom: 35%;
+    opacity: 1; }
+  10% {
+    bottom: 35%;
+    opacity: 1; }
+  90% {
+    bottom: 35%;
+    opacity: 1; }
+  100% {
+    bottom: 100%;
+    opacity: 0; } }
+@-moz-keyframes arrow2 {
+  0% {
+    bottom: 35%;
+    opacity: 1; }
+  10% {
+    bottom: 35%;
+    opacity: 1; }
+  90% {
+    bottom: 35%;
+    opacity: 1; }
+  100% {
+    bottom: 100%;
+    opacity: 0; } }
+@-o-keyframes arrow2 {
+  0% {
+    bottom: 35%;
+    opacity: 1; }
+  10% {
+    bottom: 35%;
+    opacity: 1; }
+  90% {
+    bottom: 35%;
+    opacity: 1; }
+  100% {
+    bottom: 100%;
+    opacity: 0; } }
+@keyframes arrow2 {
+  0% {
+    bottom: 35%;
+    opacity: 1; }
+  10% {
+    bottom: 35%;
+    opacity: 1; }
+  90% {
+    bottom: 35%;
+    opacity: 1; }
+  100% {
+    bottom: 100%;
+    opacity: 0; } }
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(0.6); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+@-moz-keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(0.6); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+@-o-keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(0.6); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(180deg) scale(0.6); }
+  100% {
+    transform: rotate(360deg) scale(1); } }
+@-webkit-keyframes blur {
+  0% {
+    -webkit-filter: blur(0px); }
+  50% {
+    -webkit-filter: blur(2px); }
+  100% {
+    -webkit-filter: blur(5px); } }
+@-moz-keyframes blur {
+  0% {
+    -webkit-filter: blur(0px); }
+  50% {
+    -webkit-filter: blur(2px); }
+  100% {
+    -webkit-filter: blur(5px); } }
+@-o-keyframes blur {
+  0% {
+    -webkit-filter: blur(0px); }
+  50% {
+    -webkit-filter: blur(2px); }
+  100% {
+    -webkit-filter: blur(5px); } }
+@keyframes blur {
+  0% {
+    -webkit-filter: blur(0px); }
+  50% {
+    -webkit-filter: blur(2px); }
+  100% {
+    -webkit-filter: blur(5px); } }
+/* line 67, ../sass/share.scss */
+.arrow-hint {
+  top: 0;
+  height: 88px;
+  left: 50%;
+  margin-left: -12px;
+  overflow: hidden;
+  position: absolute;
+  width: 24px; }
+  /* line 75, ../sass/share.scss */
+  .arrow-hint .wrap {
+    position: relative;
+    height: 100%; }
+
+/* line 80, ../sass/share.scss */
+.arrow-1 {
+  -webkit-animation: arrow1 3s infinite ease-out;
+  animation: arrow1 3s infinite ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0; }
+
+/* line 86, ../sass/share.scss */
+.arrow-2 {
+  -webkit-animation: arrow2 3s infinite ease-in;
+  animation: arrow2 3s infinite ease-in;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+/* line 92, ../sass/share.scss */
+.icon-arrow {
+  background-position: 0 -8px;
+  height: 16px;
+  width: 24px;
+  position: absolute; }
+  /* line 97, ../sass/share.scss */
+  .icon-arrow i {
+    font-size: 3.5rem;
+    line-height: 0;
+    color: #fff; }
+
+/* line 107, ../sass/share.scss */
 .uppercase {
   text-transform: uppercase; }
 
-/* line 9, ../sass/share.scss */
+/* line 110, ../sass/share.scss */
 a {
   color: #000; }
-  /* line 11, ../sass/share.scss */
+  /* line 112, ../sass/share.scss */
   a:hover {
     color: #07510a;
     text-decoration: none; }
-  /* line 15, ../sass/share.scss */
+  /* line 116, ../sass/share.scss */
   a:focus {
     color: #000; }
 
-/* line 52, ../sass/share.scss */
+/* line 153, ../sass/share.scss */
 .share-page {
   font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
+  min-width: 320px;
   position: relative;
   z-index: 0;
   color: #000; }
-  /* line 70, ../sass/share.scss */
+  /* line 172, ../sass/share.scss */
   .share-page .wrapper {
     background-color: #fff;
     z-index: 1; }
-  /* line 75, ../sass/share.scss */
+  /* line 177, ../sass/share.scss */
   .share-page header .logo {
     text-align: center;
     margin: 8px 0 30px;
     font-weight: 600; }
-    /* line 24, ../sass/share.scss */
+    /* line 125, ../sass/share.scss */
     .share-page header .logo .share {
       font-size: 8rem;
       font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
       position: relative;
       line-height: 10rem; }
-    /* line 30, ../sass/share.scss */
+    /* line 131, ../sass/share.scss */
     .share-page header .logo .by {
       padding-left: 15px;
       font-size: 18px;
@@ -43,31 +244,31 @@ a {
       bottom: -12px;
       position: absolute;
       right: -40px; }
-    /* line 39, ../sass/share.scss */
+    /* line 140, ../sass/share.scss */
     .share-page header .logo .ah {
       text-transform: uppercase;
       font-size: 2.5rem;
       letter-spacing: 7px; }
-    /* line 44, ../sass/share.scss */
+    /* line 145, ../sass/share.scss */
     .share-page header .logo .share-logo {
       margin: 50px 0 11px; }
-      /* line 46, ../sass/share.scss */
+      /* line 147, ../sass/share.scss */
       .share-page header .logo .share-logo img {
         width: 240px; }
-  /* line 78, ../sass/share.scss */
+  /* line 180, ../sass/share.scss */
   .share-page header .placeholder {
     display: none; }
-  /* line 81, ../sass/share.scss */
+  /* line 183, ../sass/share.scss */
   .share-page header .menu-wrapper {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     margin-bottom: 20px; }
-    /* line 88, ../sass/share.scss */
+    /* line 190, ../sass/share.scss */
     .share-page header .menu-wrapper .container {
       padding: 0 10px; }
-    /* line 91, ../sass/share.scss */
+    /* line 193, ../sass/share.scss */
     .share-page header .menu-wrapper.fixed {
       position: fixed;
       top: 0;
@@ -79,10 +280,10 @@ a {
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0); }
-      /* line 102, ../sass/share.scss */
+      /* line 204, ../sass/share.scss */
       .share-page header .menu-wrapper.fixed .container {
         padding: 0 25px; }
-  /* line 107, ../sass/share.scss */
+  /* line 209, ../sass/share.scss */
   .share-page header ul.menu {
     list-style: none;
     margin: 0;
@@ -90,23 +291,23 @@ a {
     text-align: center;
     z-index: 2; }
     @media (min-width: 480px) {
-      /* line 107, ../sass/share.scss */
+      /* line 209, ../sass/share.scss */
       .share-page header ul.menu {
         text-align: left; } }
-    /* line 116, ../sass/share.scss */
+    /* line 218, ../sass/share.scss */
     .share-page header ul.menu li {
       display: inline-block;
       list-style: none; }
-      /* line 119, ../sass/share.scss */
+      /* line 221, ../sass/share.scss */
       .share-page header ul.menu li:after {
         padding: 0 3px;
         content: '/';
         font-weight: 800;
         font-size: 1.7rem; }
-      /* line 126, ../sass/share.scss */
+      /* line 228, ../sass/share.scss */
       .share-page header ul.menu li:last-child:after {
         display: none; }
-      /* line 130, ../sass/share.scss */
+      /* line 232, ../sass/share.scss */
       .share-page header ul.menu li a {
         cursor: pointer;
         font-size: 1.7rem;
@@ -114,28 +315,28 @@ a {
         text-transform: uppercase;
         vertical-align: middle;
         letter-spacing: 3px; }
-      /* line 138, ../sass/share.scss */
+      /* line 240, ../sass/share.scss */
       .share-page header ul.menu li span {
         font-size: 11px;
         vertical-align: baseline; }
-        /* line 141, ../sass/share.scss */
+        /* line 243, ../sass/share.scss */
         .share-page header ul.menu li span:before {
           content: '('; }
-        /* line 144, ../sass/share.scss */
+        /* line 246, ../sass/share.scss */
         .share-page header ul.menu li span:after {
           content: ')'; }
-  /* line 153, ../sass/share.scss */
+  /* line 255, ../sass/share.scss */
   .share-page .looks .look {
     margin-bottom: 30px; }
-    /* line 155, ../sass/share.scss */
+    /* line 257, ../sass/share.scss */
     .share-page .looks .look a {
       display: block;
       padding: 5px;
       position: relative; }
-      /* line 160, ../sass/share.scss */
+      /* line 262, ../sass/share.scss */
       .share-page .looks .look a:hover .overlay {
         display: block; }
-      /* line 164, ../sass/share.scss */
+      /* line 266, ../sass/share.scss */
       .share-page .looks .look a .overlay {
         display: none;
         background-color: rgba(0, 0, 0, 0.3);
@@ -146,57 +347,58 @@ a {
         bottom: 0;
         right: 0;
         text-align: center; }
-        /* line 174, ../sass/share.scss */
+        /* line 276, ../sass/share.scss */
         .share-page .looks .look a .overlay span {
           color: #fff;
           font-size: 3rem;
           font-family: "EB Garamond", serif;
           text-transform: uppercase;
           line-height: 25rem; }
-      /* line 182, ../sass/share.scss */
+      /* line 284, ../sass/share.scss */
       .share-page .looks .look a img {
         border: 1px solid #000;
         max-width: 100%; }
-  /* line 188, ../sass/share.scss */
+  /* line 290, ../sass/share.scss */
   .share-page .looks .more {
     text-align: center;
     margin: 60px 0;
     font-weight: 600; }
-    /* line 192, ../sass/share.scss */
+    /* line 294, ../sass/share.scss */
     .share-page .looks .more a {
       font-size: 3.2rem;
       text-transform: uppercase;
       text-decoration: underline; }
-    /* line 197, ../sass/share.scss */
+    /* line 299, ../sass/share.scss */
     .share-page .looks .more span {
       letter-spacing: 4px; }
-  /* line 208, ../sass/share.scss */
+  /* line 310, ../sass/share.scss */
   .share-page .cbp-item .cbp-item-wrapper {
     position: relative;
     padding-bottom: 7px;
     box-shadow: none;
     border: 1px solid #000; }
-    /* line 213, ../sass/share.scss */
+    /* line 315, ../sass/share.scss */
     .share-page .cbp-item .cbp-item-wrapper .cbp-caption {
       position: initial; }
-      /* line 215, ../sass/share.scss */
+      /* line 317, ../sass/share.scss */
       .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover {
         border-color: transparent; }
-        /* line 217, ../sass/share.scss */
-        .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover .cbp-caption-activeWrap {
-          top: -5px;
-          left: -5px;
-          width: 105%;
-          height: 105%;
-          background-color: rgba(0, 0, 0, 0.3); }
-        /* line 224, ../sass/share.scss */
+        /* line 319, ../sass/share.scss */
         .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover .cbp-caption-defaultWrap {
           opacity: 1; }
-      /* line 228, ../sass/share.scss */
+        @media (min-width: 768px) {
+          /* line 323, ../sass/share.scss */
+          .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover .cbp-caption-activeWrap {
+            top: -5px;
+            left: -5px;
+            width: 105%;
+            height: 105%;
+            background-color: rgba(0, 0, 0, 0.3); } }
+      /* line 332, ../sass/share.scss */
       .share-page .cbp-item .cbp-item-wrapper .cbp-caption .cbp-caption-activeWrap {
         top: 100%;
         left: 0; }
-        /* line 231, ../sass/share.scss */
+        /* line 335, ../sass/share.scss */
         .share-page .cbp-item .cbp-item-wrapper .cbp-caption .cbp-caption-activeWrap span {
           position: absolute;
           top: 50%;
@@ -209,62 +411,69 @@ a {
           font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
           text-transform: uppercase;
           letter-spacing: 5px; }
-  /* line 250, ../sass/share.scss */
+  /* line 354, ../sass/share.scss */
   .share-page .cbp-l-loadMore-button .cbp-l-loadMore-link,
   .share-page .cbp-l-loadMore-button .cbp-l-loadMore-button-link {
     border: none;
     color: #000;
     margin-top: 0;
     font-weight: 800; }
-  /* line 259, ../sass/share.scss */
+  /* line 362, ../sass/share.scss */
   .share-page .footer {
     padding: 30px 0;
     border-top: 1px solid #ccc;
     font-size: 1.7rem;
     font-weight: 600; }
-    /* line 264, ../sass/share.scss */
+    /* line 367, ../sass/share.scss */
     .share-page .footer a {
       text-transform: uppercase;
       letter-spacing: 2px; }
-      /* line 268, ../sass/share.scss */
+      /* line 371, ../sass/share.scss */
       .share-page .footer a:last-child:after {
         display: none; }
-      /* line 272, ../sass/share.scss */
+      /* line 375, ../sass/share.scss */
       .share-page .footer a:after {
         padding: 0 10px;
         content: '/'; }
-    /* line 277, ../sass/share.scss */
+    /* line 380, ../sass/share.scss */
     .share-page .footer .copyright {
-      text-align: center;
       margin-bottom: 10px; }
       @media (min-width: 768px) {
-        /* line 277, ../sass/share.scss */
+        /* line 380, ../sass/share.scss */
         .share-page .footer .copyright {
           text-align: left;
           margin-bottom: 0; } }
-      /* line 284, ../sass/share.scss */
+      /* line 386, ../sass/share.scss */
       .share-page .footer .copyright span {
+        font-size: 1rem;
         letter-spacing: 2px; }
-    /* line 288, ../sass/share.scss */
+        @media (min-width: 480px) {
+          /* line 386, ../sass/share.scss */
+          .share-page .footer .copyright span {
+            font-size: 1.7rem; } }
+    /* line 394, ../sass/share.scss */
     .share-page .footer .social-links {
       text-align: center; }
       @media (min-width: 768px) {
-        /* line 288, ../sass/share.scss */
+        /* line 394, ../sass/share.scss */
         .share-page .footer .social-links {
           text-align: right; } }
-    /* line 294, ../sass/share.scss */
+    /* line 400, ../sass/share.scss */
     .share-page .footer a {
       color: #000; }
-      /* line 296, ../sass/share.scss */
+      /* line 402, ../sass/share.scss */
       .share-page .footer a:hover, .share-page .footer a:focus, .share-page .footer a:active {
         color: #000;
         text-decoration: none; }
-  /* line 303, ../sass/share.scss */
+  /* line 409, ../sass/share.scss */
   .share-page footer {
     z-index: -2;
     position: relative;
     height: 435px; }
-    /* line 308, ../sass/share.scss */
+    /* line 414, ../sass/share.scss */
+    .share-page footer .container {
+      margin-top: 12%; }
+    /* line 417, ../sass/share.scss */
     .share-page footer .wrapper {
       z-index: -1;
       background: url("../img/footer_bg2.jpg") 50% 0 #ebf2f8;
@@ -274,7 +483,7 @@ a {
       height: 435px;
       width: 100%;
       bottom: 0; }
-      /* line 317, ../sass/share.scss */
+      /* line 426, ../sass/share.scss */
       .share-page footer .wrapper .brand {
         font-size: 7.5rem;
         line-height: 7.5rem;
@@ -284,111 +493,154 @@ a {
         letter-spacing: 2rem;
         margin-top: 205px;
         display: block; }
-      /* line 327, ../sass/share.scss */
+      /* line 436, ../sass/share.scss */
+      .share-page footer .wrapper .moto {
+        font-size: 3rem;
+        color: #fff; }
+      /* line 440, ../sass/share.scss */
       .share-page footer .wrapper .email {
+        text-transform: uppercase;
         display: block;
         color: #fff;
-        font-size: 3rem; }
+        font-size: 2.1rem; }
+      /* line 446, ../sass/share.scss */
+      .share-page footer .wrapper .phone {
+        font-size: 3rem;
+        color: #fff; }
 
-/* line 340, ../sass/share.scss */
+/* line 458, ../sass/share.scss */
 .cbp-popup-wrap {
-  font-family: "Apercu Bold", Calibri, Roboto, sans-serif; }
-  /* line 343, ../sass/share.scss */
+  font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
+  min-width: 320px; }
+  /* line 462, ../sass/share.scss */
   .cbp-popup-wrap .main-image img {
     max-width: 100%; }
-  /* line 348, ../sass/share.scss */
+  /* line 467, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-content {
     margin-top: initial;
     width: 70%; }
-  /* line 352, ../sass/share.scss */
+  /* line 471, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation-wrap {
     position: initial;
     z-index: 0;
     height: initial;
     background-color: transparent; }
-  /* line 358, ../sass/share.scss */
+  /* line 477, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation {
     position: inherit; }
-    /* line 360, ../sass/share.scss */
+    /* line 479, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-close {
-      top: 188px;
-      right: 10%;
+      top: 157px;
+      right: 5%;
       left: inherit;
       bottom: inherit;
       background-position: -93px -183px;
       z-index: 1; }
-    /* line 368, ../sass/share.scss */
+    /* line 487, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-next {
       left: inherit;
-      right: 5%;
+      right: 0;
       z-index: 1;
-      background: url("../img/cbp-sprite.png") no-repeat scroll -46px -92px #cccccc; }
-    /* line 383, ../sass/share.scss */
+      background: none;
+      font: normal normal normal 14px/1 FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-size: 40px;
+      color: #000; }
+      @media (min-width: 480px) {
+        /* line 487, ../sass/share.scss */
+        .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-next {
+          right: 5%; } }
+      /* line 501, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-next:before {
+        content: "\f105"; }
+    /* line 505, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev {
-      background: url("../img/cbp-sprite.png") no-repeat scroll 0 -92px #cccccc;
-      left: 5%;
+      left: 0;
       right: initial;
-      z-index: 1; }
-  /* line 399, ../sass/share.scss */
+      z-index: 1;
+      background: none;
+      font: normal normal normal 14px/1 FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-size: 40px;
+      color: #000; }
+      @media (min-width: 480px) {
+        /* line 505, ../sass/share.scss */
+        .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev {
+          left: 5%; } }
+      /* line 519, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev:before {
+        content: "\f104"; }
+  /* line 524, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text {
-    color: #000; }
-    /* line 401, ../sass/share.scss */
+    color: #000;
+    margin-top: 20px; }
+    @media (min-width: 768px) {
+      /* line 524, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text {
+        margin-top: 0; } }
+    /* line 530, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text h1 {
       font-weight: 600;
       margin-top: 0; }
-    /* line 405, ../sass/share.scss */
+    /* line 534, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text p {
       font-size: 18px;
       font-weight: 600; }
-    /* line 409, ../sass/share.scss */
+    /* line 538, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text a {
       text-decoration: underline;
       color: #000; }
-      /* line 412, ../sass/share.scss */
+      /* line 541, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text a:hover {
         color: #000; }
-  /* line 418, ../sass/share.scss */
+  /* line 547, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .social a {
     color: #000; }
-    /* line 420, ../sass/share.scss */
+    /* line 549, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .social a:hover {
       color: #000; }
-  /* line 425, ../sass/share.scss */
+  /* line 554, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .social {
-    position: absolute;
-    bottom: 0;
-    right: 0; }
-    /* line 429, ../sass/share.scss */
+    margin-top: 20px; }
+    @media (min-width: 768px) {
+      /* line 554, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .social {
+        position: absolute;
+        bottom: 0;
+        right: 0; } }
+    /* line 561, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .social .icons {
       margin-bottom: 20px; }
-      /* line 431, ../sass/share.scss */
+      /* line 563, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .social .icons a {
         display: inline-block;
         margin-right: 10px; }
-        /* line 434, ../sass/share.scss */
+        /* line 566, ../sass/share.scss */
         .cbp-popup-wrap.cbp-popup-singlePage .social .icons a i {
           font-size: 30px; }
-    /* line 439, ../sass/share.scss */
+    /* line 571, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .social .homelink {
       display: inline-block;
       color: #07510a;
       font-weight: 600;
       font-size: 14px; }
-      /* line 444, ../sass/share.scss */
+      /* line 576, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .social .homelink:hover {
         color: #07510a; }
-  /* line 450, ../sass/share.scss */
+  /* line 582, ../sass/share.scss */
   .cbp-popup-wrap .logo {
     text-align: center;
     margin: 8px 0 30px;
     font-weight: 600; }
-    /* line 24, ../sass/share.scss */
+    /* line 125, ../sass/share.scss */
     .cbp-popup-wrap .logo .share {
       font-size: 8rem;
       font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
       position: relative;
       line-height: 10rem; }
-    /* line 30, ../sass/share.scss */
+    /* line 131, ../sass/share.scss */
     .cbp-popup-wrap .logo .by {
       padding-left: 15px;
       font-size: 18px;
@@ -397,19 +649,19 @@ a {
       bottom: -12px;
       position: absolute;
       right: -40px; }
-    /* line 39, ../sass/share.scss */
+    /* line 140, ../sass/share.scss */
     .cbp-popup-wrap .logo .ah {
       text-transform: uppercase;
       font-size: 2.5rem;
       letter-spacing: 7px; }
-    /* line 44, ../sass/share.scss */
+    /* line 145, ../sass/share.scss */
     .cbp-popup-wrap .logo .share-logo {
       margin: 50px 0 11px; }
-      /* line 46, ../sass/share.scss */
+      /* line 147, ../sass/share.scss */
       .cbp-popup-wrap .logo .share-logo img {
         width: 240px; }
 
-/* line 455, ../sass/share.scss */
+/* line 587, ../sass/share.scss */
 .cbp:after, .cbp-lazyload:after, .cbp-popup-loadingBox:after, .cbp-popup-singlePageInline:after {
   content: '';
   position: absolute;

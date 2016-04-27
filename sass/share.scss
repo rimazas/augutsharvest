@@ -1,8 +1,109 @@
 
+@import "mixin";
 @import "breakpoint";
 @import "variables";
 
 
+@include keyframes(arrow1)
+{
+  0%{
+    bottom: 0;
+    opacity: 0;
+  }
+  10%{
+    bottom: 0;
+    opacity: 0;
+  }
+  90%{
+    bottom: 0;
+    opacity: 0;
+  }
+  100%{
+    bottom: 35%;
+    opacity: 1;
+  }
+}
+
+@include keyframes(arrow2)
+{
+  0%{
+    bottom: 35%;
+    opacity: 1;
+  }
+  10%{
+    bottom: 35%;
+    opacity: 1;
+  }
+  90%{
+    bottom: 35%;
+    opacity: 1;
+  }
+  100%{
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@include keyframes(rotate)
+{
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.6);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@include keyframes(blur)
+{
+  0% { -webkit-filter: blur(0px);}
+  50% { -webkit-filter: blur(2px);}
+  100% { -webkit-filter: blur(5px);}
+}
+
+.arrow-hint {
+  top: 0;
+  height: 88px;
+  left: 50%;
+  margin-left: -12px;
+  overflow: hidden;
+  position: absolute;
+  width: 24px;
+  .wrap {
+    position: relative;
+    height: 100%;
+  }
+}
+.arrow-1 {
+  -webkit-animation: arrow1 3s infinite ease-out;
+  animation: arrow1 3s infinite ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.arrow-2 {
+  -webkit-animation: arrow2 3s infinite ease-in;
+  animation: arrow2 3s infinite ease-in;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.icon-arrow {
+  background-position: 0 -8px;
+  height: 16px;
+  width: 24px;
+  position: absolute;
+  i {
+    font-size: 3.5rem;
+    line-height: 0;
+    color: #fff;
+  }
+}
+
+html {
+//  font-size: 13px;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -51,6 +152,7 @@ a {
 
 .share-page {
   font-family: $apercu;
+  min-width: 320px;
   &:before {
 //    content: '';
 //    background-image: url('../img/share_harvest.jpg');
@@ -212,17 +314,19 @@ a {
       border: 1px solid #000;
       .cbp-caption {
         position: initial;
-        &:hover,  {
+        &:hover  {
           border-color: transparent;
-          .cbp-caption-activeWrap {
-            top: -5px;
-            left: -5px;
-            width: 105%;
-            height: 105%;
-            background-color: rgba(#000,0.3);
-          }
           .cbp-caption-defaultWrap {
             opacity: 1;
+          }
+          @include breakpoint($screen-sm) {
+            .cbp-caption-activeWrap {
+              top: -5px;
+              left: -5px;
+              width: 105%;
+              height: 105%;
+              background-color: rgba(#000,0.3);
+            }
           }
         }
         .cbp-caption-activeWrap {
@@ -255,7 +359,6 @@ a {
     font-weight: 800;
   }
 
-
   .footer {
     padding: 30px 0;
     border-top: 1px solid #ccc;
@@ -275,14 +378,17 @@ a {
       }
     }
     .copyright {
-      text-align: center;
       margin-bottom: 10px;
       @include breakpoint($screen-sm) {
         text-align: left;
         margin-bottom: 0;
       }
       span {
+        font-size: 1rem;
         letter-spacing: 2px;
+        @include breakpoint($screen-xs) {
+          font-size: 1.7rem;
+        }
       }
     }
     .social-links {
@@ -305,6 +411,9 @@ a {
     z-index: -2;
     position: relative;
     height: $height;
+    .container {
+      margin-top: 12%;
+    }
     .wrapper {
       z-index: -1;
       background: url("../img/footer_bg2.jpg") 50% 0 #ebf2f8;
@@ -324,10 +433,19 @@ a {
         margin-top: 205px;
         display: block;
       }
+      .moto {
+        font-size: 3rem;
+        color: #fff;
+      }
       .email {
+        text-transform: uppercase;
         display: block;
         color: #fff;
+        font-size: 2.1rem;
+      }
+      .phone {
         font-size: 3rem;
+        color: #fff;
       }
     }
 
@@ -339,6 +457,7 @@ a {
 
 .cbp-popup-wrap {
   font-family: $apercu;
+  min-width: 320px;
   .main-image {
     img{
       max-width: 100%;
@@ -358,46 +477,56 @@ a {
     .cbp-popup-navigation {
       position: inherit;
       .cbp-popup-close {
-        top: 188px;
-        right: 10%;
+        top: 157px;
+        right: 5%;
         left: inherit;
         bottom: inherit;
         background-position: -93px -183px;
         z-index: 1;
       }
       .cbp-popup-next {
+        @include breakpoint($screen-xs) {
+          right: 5%
+        }
         left: inherit;
-        right: 5%;
+        right: 0;
         z-index: 1;
-        background: url("../img/cbp-sprite.png") no-repeat scroll -46px -92px rgba(#ccc, 1);
-//        background: none;
-//        font: normal normal normal 14px/1 FontAwesome;
-//        text-rendering: auto;
-//        -webkit-font-smoothing: antialiased;
-//        font-size: 36px;
-//        color: #666;
-//        &:before {
-//          content: "\f061";
-//        }
+//        background: url("../img/cbp-sprite.png") no-repeat scroll -46px -92px rgba(#ccc, 1);
+        background: none;
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-size: 40px;
+        color: #000;
+        &:before {
+          content: "\f105";
+        }
       }
       .cbp-popup-prev {
-        background: url("../img/cbp-sprite.png") no-repeat scroll 0 -92px rgba(#ccc, 1);
-        left: 5%;
+        @include breakpoint($screen-xs) {
+          left: 5%;
+        }
+//        background: url("../img/cbp-sprite.png") no-repeat scroll 0 -92px rgba(#ccc, 1);
+        left: 0;
         right: initial;
         z-index: 1;
-//        background: none;
-//        font: normal normal normal 14px/1 FontAwesome;
-//        text-rendering: auto;
-//        -webkit-font-smoothing: antialiased;
-//        font-size: 36px;
-//        color: #666;
-//        &:before {
-//          content: "\f060";
-//        }
+        background: none;
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-size: 40px;
+        color: #000;
+        &:before {
+          content: "\f104";
+        }
       }
     }
     .cbp-l-project-desc-text {
       color: #000;
+      margin-top: 20px;
+      @include breakpoint($screen-sm) {
+        margin-top: 0;
+      }
       h1 {
         font-weight: 600;
         margin-top: 0;
@@ -423,9 +552,12 @@ a {
       }
     }
     .social {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      margin-top: 20px;
+      @include breakpoint($screen-sm){
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
       .icons {
         margin-bottom: 20px;
         a {
