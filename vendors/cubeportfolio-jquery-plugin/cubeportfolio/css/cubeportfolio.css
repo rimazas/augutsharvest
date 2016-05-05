@@ -1,7 +1,7 @@
 /*!
  * Cube Portfolio - Responsive jQuery Grid Plugin
  *
- * version: 3.6.0 (18 March, 2016)
+ * version: 3.6.2 (27 April, 2016)
  * require: jQuery v1.7+
  *
  * Copyright 2013-2016, Mihai Buricea (http://scriptpie.com/cubeportfolio/live-preview/)
@@ -2885,7 +2885,7 @@
   color: #757575; }
 
 .cbp-l-inline-details {
-  margin-top: 15px;
+  margin-bottom: 15px;
   font: 13px/22px "Open Sans", sans-serif; }
 
 /* default state */

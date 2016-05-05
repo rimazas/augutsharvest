@@ -160,7 +160,7 @@
     -webkit-filter: blur(5px); } }
 /* line 67, ../sass/share.scss */
 .arrow-hint {
-  top: 0;
+  bottom: 0;
   height: 88px;
   left: 50%;
   margin-left: -12px;
@@ -173,69 +173,71 @@
     height: 100%; }
 
 /* line 80, ../sass/share.scss */
-.arrow-1 {
-  -webkit-animation: arrow1 3s infinite ease-out;
-  animation: arrow1 3s infinite ease-out;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0; }
+.scroll {
+  cursor: pointer; }
 
-/* line 86, ../sass/share.scss */
-.arrow-2 {
-  -webkit-animation: arrow2 3s infinite ease-in;
-  animation: arrow2 3s infinite ease-in;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+/* line 83, ../sass/share.scss */
+.arrow-1 {
+  bottom: 13px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 1; }
 
-/* line 92, ../sass/share.scss */
+/* line 88, ../sass/share.scss */
+.arrow-2 {
+  bottom: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 0; }
+
+/* line 93, ../sass/share.scss */
 .icon-arrow {
   background-position: 0 -8px;
   height: 16px;
   width: 24px;
   position: absolute; }
-  /* line 97, ../sass/share.scss */
+  /* line 98, ../sass/share.scss */
   .icon-arrow i {
     font-size: 3.5rem;
     line-height: 0;
     color: #fff; }
 
-/* line 107, ../sass/share.scss */
+/* line 108, ../sass/share.scss */
 .uppercase {
   text-transform: uppercase; }
 
-/* line 110, ../sass/share.scss */
+/* line 111, ../sass/share.scss */
 a {
   color: #000; }
-  /* line 112, ../sass/share.scss */
+  /* line 113, ../sass/share.scss */
   a:hover {
     color: #07510a;
     text-decoration: none; }
-  /* line 116, ../sass/share.scss */
+  /* line 117, ../sass/share.scss */
   a:focus {
     color: #000; }
 
-/* line 153, ../sass/share.scss */
+/* line 154, ../sass/share.scss */
 .share-page {
   font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
   min-width: 320px;
   position: relative;
   z-index: 0;
   color: #000; }
-  /* line 172, ../sass/share.scss */
+  /* line 173, ../sass/share.scss */
   .share-page .wrapper {
     background-color: #fff;
     z-index: 1; }
-  /* line 177, ../sass/share.scss */
+  /* line 178, ../sass/share.scss */
   .share-page header .logo {
     text-align: center;
     margin: 8px 0 30px;
     font-weight: 600; }
-    /* line 125, ../sass/share.scss */
+    /* line 126, ../sass/share.scss */
     .share-page header .logo .share {
       font-size: 8rem;
       font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
       position: relative;
       line-height: 10rem; }
-    /* line 131, ../sass/share.scss */
+    /* line 132, ../sass/share.scss */
     .share-page header .logo .by {
       padding-left: 15px;
       font-size: 18px;
@@ -244,31 +246,31 @@ a {
       bottom: -12px;
       position: absolute;
       right: -40px; }
-    /* line 140, ../sass/share.scss */
+    /* line 141, ../sass/share.scss */
     .share-page header .logo .ah {
       text-transform: uppercase;
       font-size: 2.5rem;
       letter-spacing: 7px; }
-    /* line 145, ../sass/share.scss */
+    /* line 146, ../sass/share.scss */
     .share-page header .logo .share-logo {
       margin: 50px 0 11px; }
-      /* line 147, ../sass/share.scss */
+      /* line 148, ../sass/share.scss */
       .share-page header .logo .share-logo img {
         width: 240px; }
-  /* line 180, ../sass/share.scss */
+  /* line 181, ../sass/share.scss */
   .share-page header .placeholder {
     display: none; }
-  /* line 183, ../sass/share.scss */
+  /* line 184, ../sass/share.scss */
   .share-page header .menu-wrapper {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     margin-bottom: 20px; }
-    /* line 190, ../sass/share.scss */
+    /* line 191, ../sass/share.scss */
     .share-page header .menu-wrapper .container {
       padding: 0 10px; }
-    /* line 193, ../sass/share.scss */
+    /* line 194, ../sass/share.scss */
     .share-page header .menu-wrapper.fixed {
       position: fixed;
       top: 0;
@@ -280,10 +282,10 @@ a {
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0); }
-      /* line 204, ../sass/share.scss */
+      /* line 205, ../sass/share.scss */
       .share-page header .menu-wrapper.fixed .container {
         padding: 0 25px; }
-  /* line 209, ../sass/share.scss */
+  /* line 210, ../sass/share.scss */
   .share-page header ul.menu {
     list-style: none;
     margin: 0;
@@ -291,52 +293,61 @@ a {
     text-align: center;
     z-index: 2; }
     @media (min-width: 480px) {
-      /* line 209, ../sass/share.scss */
+      /* line 210, ../sass/share.scss */
       .share-page header ul.menu {
         text-align: left; } }
-    /* line 218, ../sass/share.scss */
+    /* line 219, ../sass/share.scss */
     .share-page header ul.menu li {
       display: inline-block;
       list-style: none; }
-      /* line 221, ../sass/share.scss */
+      /* line 222, ../sass/share.scss */
       .share-page header ul.menu li:after {
         padding: 0 3px;
         content: '/';
         font-weight: 800;
         font-size: 1.7rem; }
-      /* line 228, ../sass/share.scss */
+      /* line 229, ../sass/share.scss */
       .share-page header ul.menu li:last-child:after {
         display: none; }
-      /* line 232, ../sass/share.scss */
+      /* line 233, ../sass/share.scss */
       .share-page header ul.menu li a {
         cursor: pointer;
         font-size: 1.7rem;
         font-weight: 600;
         text-transform: uppercase;
         vertical-align: middle;
-        letter-spacing: 3px; }
-      /* line 240, ../sass/share.scss */
+        letter-spacing: 2px; }
+      /* line 241, ../sass/share.scss */
       .share-page header ul.menu li span {
         font-size: 11px;
         vertical-align: baseline; }
-        /* line 243, ../sass/share.scss */
+        /* line 244, ../sass/share.scss */
         .share-page header ul.menu li span:before {
           content: '('; }
-        /* line 246, ../sass/share.scss */
+        /* line 247, ../sass/share.scss */
         .share-page header ul.menu li span:after {
           content: ')'; }
-  /* line 255, ../sass/share.scss */
+  /* line 257, ../sass/share.scss */
+  .share-page .cbp-filter-item.cbp-filter-item-active a {
+    color: #07510a; }
+  /* line 261, ../sass/share.scss */
+  .share-page .cbp-filter-item.cbp-filter-item-active.inactive a {
+    color: #000; }
+    /* line 263, ../sass/share.scss */
+    .share-page .cbp-filter-item.cbp-filter-item-active.inactive a:hover {
+      color: #07510a; }
+  /* line 273, ../sass/share.scss */
   .share-page .looks .look {
     margin-bottom: 30px; }
-    /* line 257, ../sass/share.scss */
+    /* line 275, ../sass/share.scss */
     .share-page .looks .look a {
       display: block;
       padding: 5px;
       position: relative; }
-      /* line 262, ../sass/share.scss */
+      /* line 280, ../sass/share.scss */
       .share-page .looks .look a:hover .overlay {
         display: block; }
-      /* line 266, ../sass/share.scss */
+      /* line 284, ../sass/share.scss */
       .share-page .looks .look a .overlay {
         display: none;
         background-color: rgba(0, 0, 0, 0.3);
@@ -347,58 +358,66 @@ a {
         bottom: 0;
         right: 0;
         text-align: center; }
-        /* line 276, ../sass/share.scss */
+        /* line 294, ../sass/share.scss */
         .share-page .looks .look a .overlay span {
           color: #fff;
           font-size: 3rem;
-          font-family: "EB Garamond", serif;
+          font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
           text-transform: uppercase;
           line-height: 25rem; }
-      /* line 284, ../sass/share.scss */
+      /* line 302, ../sass/share.scss */
       .share-page .looks .look a img {
         border: 1px solid #000;
         max-width: 100%; }
-  /* line 290, ../sass/share.scss */
+  /* line 308, ../sass/share.scss */
   .share-page .looks .more {
     text-align: center;
     margin: 60px 0;
     font-weight: 600; }
-    /* line 294, ../sass/share.scss */
+    /* line 312, ../sass/share.scss */
     .share-page .looks .more a {
-      font-size: 3.2rem;
+      font-size: 3rem;
       text-transform: uppercase;
       text-decoration: underline; }
-    /* line 299, ../sass/share.scss */
+    /* line 317, ../sass/share.scss */
     .share-page .looks .more span {
-      letter-spacing: 4px; }
-  /* line 310, ../sass/share.scss */
+      letter-spacing: 3px; }
+  /* line 321, ../sass/share.scss */
+  .share-page .looks .cbp-l-loadMore-button .cbp-l-loadMore-link,
+  .share-page .looks .cbp-l-loadMore-button .cbp-l-loadMore-button-link {
+    border: none;
+    color: #000;
+    margin-top: 0;
+    font-weight: 800;
+    font-family: "Apercu Bold", Calibri, Roboto, sans-serif; }
+  /* line 336, ../sass/share.scss */
   .share-page .cbp-item .cbp-item-wrapper {
     position: relative;
-    padding-bottom: 7px;
+    padding: 0;
     box-shadow: none;
     border: 1px solid #000; }
-    /* line 315, ../sass/share.scss */
+    /* line 341, ../sass/share.scss */
     .share-page .cbp-item .cbp-item-wrapper .cbp-caption {
       position: initial; }
-      /* line 317, ../sass/share.scss */
+      /* line 343, ../sass/share.scss */
       .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover {
         border-color: transparent; }
-        /* line 319, ../sass/share.scss */
+        /* line 345, ../sass/share.scss */
         .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover .cbp-caption-defaultWrap {
           opacity: 1; }
         @media (min-width: 768px) {
-          /* line 323, ../sass/share.scss */
+          /* line 349, ../sass/share.scss */
           .share-page .cbp-item .cbp-item-wrapper .cbp-caption:hover .cbp-caption-activeWrap {
             top: -5px;
             left: -5px;
             width: 105%;
             height: 105%;
             background-color: rgba(0, 0, 0, 0.3); } }
-      /* line 332, ../sass/share.scss */
+      /* line 358, ../sass/share.scss */
       .share-page .cbp-item .cbp-item-wrapper .cbp-caption .cbp-caption-activeWrap {
         top: 100%;
         left: 0; }
-        /* line 335, ../sass/share.scss */
+        /* line 361, ../sass/share.scss */
         .share-page .cbp-item .cbp-item-wrapper .cbp-caption .cbp-caption-activeWrap span {
           position: absolute;
           top: 50%;
@@ -410,80 +429,74 @@ a {
           font-weight: 600;
           font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
           text-transform: uppercase;
-          letter-spacing: 5px; }
-  /* line 354, ../sass/share.scss */
-  .share-page .cbp-l-loadMore-button .cbp-l-loadMore-link,
-  .share-page .cbp-l-loadMore-button .cbp-l-loadMore-button-link {
-    border: none;
-    color: #000;
-    margin-top: 0;
-    font-weight: 800; }
-  /* line 362, ../sass/share.scss */
+          letter-spacing: 3px; }
+  /* line 380, ../sass/share.scss */
   .share-page .footer {
-    padding: 30px 0;
+    padding: 12px 0 14px;
     border-top: 1px solid #ccc;
-    font-size: 1.7rem;
     font-weight: 600; }
-    /* line 367, ../sass/share.scss */
+    @media (min-width: 768px) {
+      /* line 380, ../sass/share.scss */
+      .share-page .footer {
+        padding: 20px 0; } }
+    /* line 387, ../sass/share.scss */
     .share-page .footer a {
       text-transform: uppercase;
       letter-spacing: 2px; }
-      /* line 371, ../sass/share.scss */
+      /* line 391, ../sass/share.scss */
       .share-page .footer a:last-child:after {
         display: none; }
-      /* line 375, ../sass/share.scss */
+      /* line 395, ../sass/share.scss */
       .share-page .footer a:after {
         padding: 0 10px;
         content: '/'; }
-    /* line 380, ../sass/share.scss */
-    .share-page .footer .copyright {
-      margin-bottom: 10px; }
-      @media (min-width: 768px) {
-        /* line 380, ../sass/share.scss */
-        .share-page .footer .copyright {
-          text-align: left;
-          margin-bottom: 0; } }
-      /* line 386, ../sass/share.scss */
-      .share-page .footer .copyright span {
-        font-size: 1rem;
-        letter-spacing: 2px; }
-        @media (min-width: 480px) {
-          /* line 386, ../sass/share.scss */
-          .share-page .footer .copyright span {
-            font-size: 1.7rem; } }
-    /* line 394, ../sass/share.scss */
+    @media (min-width: 768px) {
+      /* line 400, ../sass/share.scss */
+      .share-page .footer .copyright {
+        text-align: left;
+        margin-bottom: 0; } }
+    /* line 405, ../sass/share.scss */
+    .share-page .footer .copyright span {
+      font-size: 1rem;
+      letter-spacing: 2px; }
+      @media (min-width: 480px) {
+        /* line 405, ../sass/share.scss */
+        .share-page .footer .copyright span {
+          font-size: 1.5rem; } }
+    /* line 413, ../sass/share.scss */
     .share-page .footer .social-links {
+      font-size: 1.5rem;
       text-align: center; }
       @media (min-width: 768px) {
-        /* line 394, ../sass/share.scss */
+        /* line 413, ../sass/share.scss */
         .share-page .footer .social-links {
           text-align: right; } }
-    /* line 400, ../sass/share.scss */
+    /* line 420, ../sass/share.scss */
     .share-page .footer a {
       color: #000; }
-      /* line 402, ../sass/share.scss */
+      /* line 422, ../sass/share.scss */
       .share-page .footer a:hover, .share-page .footer a:focus, .share-page .footer a:active {
         color: #000;
         text-decoration: none; }
-  /* line 409, ../sass/share.scss */
+  /* line 429, ../sass/share.scss */
   .share-page footer {
     z-index: -2;
     position: relative;
     height: 435px; }
-    /* line 414, ../sass/share.scss */
+    /* line 434, ../sass/share.scss */
     .share-page footer .container {
-      margin-top: 12%; }
-    /* line 417, ../sass/share.scss */
+      margin-top: 75px; }
+    /* line 437, ../sass/share.scss */
     .share-page footer .wrapper {
       z-index: -1;
       background: url("../img/footer_bg2.jpg") 50% 0 #ebf2f8;
       background-size: contain;
       background-repeat: no-repeat;
       position: fixed;
-      height: 435px;
       width: 100%;
-      bottom: 0; }
-      /* line 426, ../sass/share.scss */
+      bottom: 0;
+      height: 435px; }
+      /* line 445, ../sass/share.scss */
       .share-page footer .wrapper .brand {
         font-size: 7.5rem;
         line-height: 7.5rem;
@@ -493,50 +506,152 @@ a {
         letter-spacing: 2rem;
         margin-top: 205px;
         display: block; }
-      /* line 436, ../sass/share.scss */
+      /* line 456, ../sass/share.scss */
+      .share-page footer .wrapper .container {
+        margin-top: 190px; }
+      /* line 459, ../sass/share.scss */
       .share-page footer .wrapper .moto {
         font-size: 3rem;
-        color: #fff; }
-      /* line 440, ../sass/share.scss */
+        color: #fff;
+        padding: 0 40px;
+        line-height: 32px;
+        margin-bottom: 2rem; }
+      /* line 466, ../sass/share.scss */
       .share-page footer .wrapper .email {
         text-transform: uppercase;
-        display: block;
         color: #fff;
-        font-size: 2.1rem; }
-      /* line 446, ../sass/share.scss */
+        font-size: 1.8rem; }
+      /* line 471, ../sass/share.scss */
       .share-page footer .wrapper .phone {
-        font-size: 3rem;
-        color: #fff; }
+        font-size: 1.5rem;
+        color: #fff;
+        line-height: 18px; }
+    @media (min-width: 768px) {
+      /* line 520, ../sass/share.scss */
+      .share-page footer .container {
+        margin-top: 190px; }
+      /* line 524, ../sass/share.scss */
+      .share-page footer .wrapper .moto {
+        font-size: 3.5rem;
+        color: #fff;
+        margin-bottom: 2rem; }
+      /* line 529, ../sass/share.scss */
+      .share-page footer .wrapper .email {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 1.8rem; }
+      /* line 534, ../sass/share.scss */
+      .share-page footer .wrapper .phone {
+        font-size: 2rem;
+        color: #fff;
+        line-height: 18px; } }
 
-/* line 458, ../sass/share.scss */
+/* line 545, ../sass/share.scss */
+i.close {
+  color: #000;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 0;
+  width: 44px;
+  height: 44px;
+  display: block; }
+  /* line 553, ../sass/share.scss */
+  i.close:hover, i.close:focus {
+    opacity: 1; }
+  /* line 556, ../sass/share.scss */
+  i.close span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background: #000;
+    border-radius: 10px;
+    opacity: 1;
+    top: 21px;
+    left: 11px; }
+  /* line 567, ../sass/share.scss */
+  i.close span:nth-child(1) {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  /* line 573, ../sass/share.scss */
+  i.close span:nth-child(2) {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
+  /* line 581, ../sass/share.scss */
+  i.close:hover span {
+    color: #000;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
+    transition: .1s ease-in-out; }
+  /* line 588, ../sass/share.scss */
+  i.close:hover span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  /* line 594, ../sass/share.scss */
+  i.close:hover span:nth-child(2) {
+    -webkit-transform: rotate(-225deg);
+    -moz-transform: rotate(-225deg);
+    -o-transform: rotate(-225deg);
+    transform: rotate(-225deg); }
+
+/* line 603, ../sass/share.scss */
 .cbp-popup-wrap {
   font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
   min-width: 320px; }
-  /* line 462, ../sass/share.scss */
+  /* line 607, ../sass/share.scss */
   .cbp-popup-wrap .main-image img {
     max-width: 100%; }
-  /* line 467, ../sass/share.scss */
+  /* line 612, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-content {
-    margin-top: initial;
-    width: 70%; }
-  /* line 471, ../sass/share.scss */
+    font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
+    margin-top: 0;
+    width: 100%; }
+    @media (min-width: 480px) {
+      /* line 612, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-content {
+        width: 75%;
+        margin-top: 30px; } }
+    @media (min-width: 768px) {
+      /* line 612, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-content {
+        margin-top: initial; } }
+  /* line 625, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation-wrap {
     position: initial;
     z-index: 0;
     height: initial;
     background-color: transparent; }
-  /* line 477, ../sass/share.scss */
+  /* line 631, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation {
     position: inherit; }
-    /* line 479, ../sass/share.scss */
+    /* line 633, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-close {
-      top: 157px;
-      right: 5%;
+      font-size: 45px;
+      background: none;
+      top: 0;
+      right: 0;
       left: inherit;
       bottom: inherit;
       background-position: -93px -183px;
       z-index: 1; }
-    /* line 487, ../sass/share.scss */
+      @media (min-width: 480px) {
+        /* line 633, ../sass/share.scss */
+        .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-close {
+          right: 5%;
+          top: 22px; } }
+      @media (min-width: 768px) {
+        /* line 633, ../sass/share.scss */
+        .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-close {
+          top: 157px;
+          right: 5%; } }
+    /* line 656, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-next {
       left: inherit;
       right: 0;
@@ -548,13 +663,15 @@ a {
       font-size: 40px;
       color: #000; }
       @media (min-width: 480px) {
-        /* line 487, ../sass/share.scss */
+        /* line 656, ../sass/share.scss */
         .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-next {
           right: 5%; } }
-      /* line 501, ../sass/share.scss */
+      /* line 668, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-next:before {
-        content: "\f105"; }
-    /* line 505, ../sass/share.scss */
+        transition: all 300ms;
+        content: "\f105";
+        display: block; }
+    /* line 684, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev {
       left: 0;
       right: initial;
@@ -566,81 +683,109 @@ a {
       font-size: 40px;
       color: #000; }
       @media (min-width: 480px) {
-        /* line 505, ../sass/share.scss */
+        /* line 684, ../sass/share.scss */
         .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev {
           left: 5%; } }
-      /* line 519, ../sass/share.scss */
+      /* line 696, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev:before {
+        transition: all 300ms;
+        content: "\f105";
+        display: block; }
+      /* line 711, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .cbp-popup-navigation .cbp-popup-prev:before {
         content: "\f104"; }
-  /* line 524, ../sass/share.scss */
+  /* line 716, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text {
+    font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
     color: #000;
-    margin-top: 20px; }
+    width: 75%;
+    margin: 20px auto 0; }
+    @media (min-width: 480px) {
+      /* line 716, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text {
+        width: 100%; } }
     @media (min-width: 768px) {
-      /* line 524, ../sass/share.scss */
+      /* line 716, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text {
         margin-top: 0; } }
-    /* line 530, ../sass/share.scss */
+    /* line 727, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
       font-weight: 600;
-      margin-top: 0; }
-    /* line 534, ../sass/share.scss */
+      margin-top: 0;
+      margin-bottom: 20px; }
+      @media (min-width: 480px) {
+        /* line 727, ../sass/share.scss */
+        .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text h1 {
+          font-size: 3.4rem; } }
+    /* line 738, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text p {
-      font-size: 18px;
-      font-weight: 600; }
-    /* line 538, ../sass/share.scss */
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem; }
+      @media (min-width: 480px) {
+        /* line 738, ../sass/share.scss */
+        .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text p {
+          font-size: 2rem;
+          margin-bottom: 0.8rem; } }
+    /* line 747, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text a {
       text-decoration: underline;
       color: #000; }
-      /* line 541, ../sass/share.scss */
+      /* line 750, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .cbp-l-project-desc-text a:hover {
         color: #000; }
-  /* line 547, ../sass/share.scss */
-  .cbp-popup-wrap.cbp-popup-singlePage .social a {
-    color: #000; }
-    /* line 549, ../sass/share.scss */
-    .cbp-popup-wrap.cbp-popup-singlePage .social a:hover {
-      color: #000; }
-  /* line 554, ../sass/share.scss */
+  /* line 756, ../sass/share.scss */
   .cbp-popup-wrap.cbp-popup-singlePage .social {
-    margin-top: 20px; }
-    @media (min-width: 768px) {
-      /* line 554, ../sass/share.scss */
+    width: 75%;
+    margin: 50px auto 20px; }
+    @media (min-width: 480px) {
+      /* line 756, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .social {
-        position: absolute;
-        bottom: 0;
-        right: 0; } }
-    /* line 561, ../sass/share.scss */
+        width: 100%; } }
+    /* line 762, ../sass/share.scss */
+    .cbp-popup-wrap.cbp-popup-singlePage .social a {
+      color: #000; }
+      /* line 764, ../sass/share.scss */
+      .cbp-popup-wrap.cbp-popup-singlePage .social a:hover {
+        color: #000; }
+    /* line 768, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .social .icons {
-      margin-bottom: 20px; }
-      /* line 563, ../sass/share.scss */
+      margin-bottom: 3rem;
+      padding: 0 1rem; }
+      /* line 771, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .social .icons a {
         display: inline-block;
-        margin-right: 10px; }
-        /* line 566, ../sass/share.scss */
+        margin-right: 3%; }
+        /* line 774, ../sass/share.scss */
         .cbp-popup-wrap.cbp-popup-singlePage .social .icons a i {
-          font-size: 30px; }
-    /* line 571, ../sass/share.scss */
+          font-size: 2rem;
+          margin-right: 1rem; }
+    /* line 780, ../sass/share.scss */
     .cbp-popup-wrap.cbp-popup-singlePage .social .homelink {
       display: inline-block;
       color: #07510a;
       font-weight: 600;
-      font-size: 14px; }
-      /* line 576, ../sass/share.scss */
+      font-size: 1.2rem;
+      line-height: 15px;
+      max-width: 250px; }
+      /* line 787, ../sass/share.scss */
       .cbp-popup-wrap.cbp-popup-singlePage .social .homelink:hover {
         color: #07510a; }
-  /* line 582, ../sass/share.scss */
+  /* line 793, ../sass/share.scss */
   .cbp-popup-wrap .logo {
     text-align: center;
     margin: 8px 0 30px;
     font-weight: 600; }
-    /* line 125, ../sass/share.scss */
+    /* line 126, ../sass/share.scss */
     .cbp-popup-wrap .logo .share {
       font-size: 8rem;
       font-family: "Apercu Bold", Calibri, Roboto, sans-serif;
       position: relative;
       line-height: 10rem; }
-    /* line 131, ../sass/share.scss */
+    /* line 132, ../sass/share.scss */
     .cbp-popup-wrap .logo .by {
       padding-left: 15px;
       font-size: 18px;
@@ -649,19 +794,19 @@ a {
       bottom: -12px;
       position: absolute;
       right: -40px; }
-    /* line 140, ../sass/share.scss */
+    /* line 141, ../sass/share.scss */
     .cbp-popup-wrap .logo .ah {
       text-transform: uppercase;
       font-size: 2.5rem;
       letter-spacing: 7px; }
-    /* line 145, ../sass/share.scss */
+    /* line 146, ../sass/share.scss */
     .cbp-popup-wrap .logo .share-logo {
       margin: 50px 0 11px; }
-      /* line 147, ../sass/share.scss */
+      /* line 148, ../sass/share.scss */
       .cbp-popup-wrap .logo .share-logo img {
         width: 240px; }
 
-/* line 587, ../sass/share.scss */
+/* line 798, ../sass/share.scss */
 .cbp:after, .cbp-lazyload:after, .cbp-popup-loadingBox:after, .cbp-popup-singlePageInline:after {
   content: '';
   position: absolute;

@@ -65,7 +65,7 @@
 }
 
 .arrow-hint {
-  top: 0;
+  bottom: 0;
   height: 88px;
   left: 50%;
   margin-left: -12px;
@@ -77,17 +77,18 @@
     height: 100%;
   }
 }
+.scroll {
+  cursor: pointer;
+}
 .arrow-1 {
-  -webkit-animation: arrow1 3s infinite ease-out;
-  animation: arrow1 3s infinite ease-out;
+  bottom: 13px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+  opacity: 1;
 }
 .arrow-2 {
-  -webkit-animation: arrow2 3s infinite ease-in;
-  animation: arrow2 3s infinite ease-in;
+  bottom: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+  opacity: 0;
 }
 .icon-arrow {
   background-position: 0 -8px;
@@ -235,7 +236,7 @@ a {
           font-weight: 600;
           text-transform: uppercase;
           vertical-align: middle;
-          letter-spacing: 3px;
+          letter-spacing: 2px;
         }
         span {
           font-size: 11px;
@@ -249,6 +250,23 @@ a {
         }
       }
     }
+  }
+
+  .cbp-filter-item {
+    &.cbp-filter-item-active {
+      a {
+        color: #07510a;
+      }
+      &.inactive {
+        a {
+          color: #000;
+          &:hover {
+            color: #07510a;
+          }
+        }
+      }
+    }
+
   }
 
   .looks {
@@ -276,7 +294,7 @@ a {
           span {
             color: #fff;
             font-size: 3rem;
-            font-family: $garamond;
+            font-family: $apercu;
             text-transform: uppercase;
             line-height: 25rem;
           }
@@ -292,13 +310,21 @@ a {
       margin: 60px 0;
       font-weight: 600;
       a {
-        font-size: 3.2rem;
+        font-size: 3rem;
         text-transform: uppercase;
         text-decoration: underline;
       }
       span {
-       letter-spacing: 4px;
+       letter-spacing: 3px;
       }
+    }
+    .cbp-l-loadMore-button .cbp-l-loadMore-link,
+    .cbp-l-loadMore-button .cbp-l-loadMore-button-link {
+      border: none;
+      color: #000;
+      margin-top: 0;
+      font-weight: 800;
+      font-family: $apercu;
     }
   }
 //  #share .mix{
@@ -309,7 +335,7 @@ a {
   .cbp-item {
     .cbp-item-wrapper {
       position: relative;
-      padding-bottom: 7px;
+      padding: 0;
       box-shadow: none;
       border: 1px solid #000;
       .cbp-caption {
@@ -344,26 +370,20 @@ a {
             font-weight: 600;
             font-family: $apercu;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
           }
         }
       }
     }
   }
 
-  .cbp-l-loadMore-button .cbp-l-loadMore-link,
-  .cbp-l-loadMore-button .cbp-l-loadMore-button-link {
-    border: none;
-    color: #000;
-    margin-top: 0;
-    font-weight: 800;
-  }
-
   .footer {
-    padding: 30px 0;
+    padding: 12px 0 14px;
     border-top: 1px solid #ccc;
-    font-size: 1.7rem;
     font-weight: 600;
+    @include breakpoint($screen-sm) {
+      padding: 20px 0;
+    }
     a {
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -378,7 +398,6 @@ a {
       }
     }
     .copyright {
-      margin-bottom: 10px;
       @include breakpoint($screen-sm) {
         text-align: left;
         margin-bottom: 0;
@@ -387,11 +406,12 @@ a {
         font-size: 1rem;
         letter-spacing: 2px;
         @include breakpoint($screen-xs) {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
         }
       }
     }
     .social-links {
+      font-size: 1.5rem;
       text-align: center;
       @include breakpoint($screen-sm) {
         text-align: right;
@@ -412,7 +432,7 @@ a {
     position: relative;
     height: $height;
     .container {
-      margin-top: 12%;
+      margin-top: 75px;
     }
     .wrapper {
       z-index: -1;
@@ -420,7 +440,6 @@ a {
       background-size: contain;
       background-repeat: no-repeat;
       position: fixed;
-      height: $height;
       width: 100%;
       bottom: 0;
       .brand {
@@ -433,26 +452,152 @@ a {
         margin-top: 205px;
         display: block;
       }
+      height: $height;
+      .container {
+        margin-top: 190px;
+      }
       .moto {
         font-size: 3rem;
         color: #fff;
+        padding: 0 40px;
+        line-height: 32px;
+        margin-bottom: 2rem;
       }
       .email {
         text-transform: uppercase;
-        display: block;
         color: #fff;
-        font-size: 2.1rem;
+        font-size: 1.8rem;
       }
       .phone {
-        font-size: 3rem;
+        font-size: 1.5rem;
         color: #fff;
+        line-height: 18px;
+      }
+
+//      .moto {
+//        font-size: 2.5rem;
+//        color: #fff;
+//        line-height: 2rem;
+//        margin-bottom: 1rem;
+//      }
+//      .email {
+//        text-transform: uppercase;
+//        color: #fff;
+//        font-size: 1.1rem;
+//      }
+//      .phone {
+//        font-size: 1.1rem;
+//        color: #fff;
+//        line-height: 18px;
+//      }
+    }
+//    @include breakpoint($screen-xs) {
+//      $height: 320px;
+//      height: $height;
+//      .container {
+//        margin-top: 140px;
+//      }
+//      .wrapper {
+//        height: $height;
+//        .moto {
+//          font-size: 3rem;
+//          color: #fff;
+//          margin-bottom: 1.5rem;
+//        }
+//        .email {
+//          text-transform: uppercase;
+//          color: #fff;
+//          font-size: 1.5rem;
+//        }
+//        .phone {
+//          font-size: 1.5rem;
+//          color: #fff;
+//          line-height: 18px;
+//        }
+//      }
+//    }
+    @include breakpoint($screen-sm) {
+      .container {
+        margin-top: 190px;
+      }
+      .wrapper {
+        .moto {
+          font-size: 3.5rem;
+          color: #fff;
+          margin-bottom: 2rem;
+        }
+        .email {
+          text-transform: uppercase;
+          color: #fff;
+          font-size: 1.8rem;
+        }
+        .phone {
+          font-size: 2rem;
+          color: #fff;
+          line-height: 18px;
+        }
       }
     }
-
   }
 
+}
 
+i.close {
+  color: #000;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 0;
+  width: 44px;
+  height: 44px;
+  display: block;
+  &:hover, &:focus {
+    opacity: 1;
+  }
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background: #000;
+    border-radius: 10px;
+    opacity: 1;
+    top: 21px;
+    left: 11px;
+  }
+  span:nth-child(1) {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  span:nth-child(2) {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  &:hover {
 
+    span {
+      color: #000;
+      -webkit-transition: .1s ease-in-out;
+      -moz-transition: .1s ease-in-out;
+      -o-transition: .1s ease-in-out;
+      transition: .1s ease-in-out;
+    }
+    span:nth-child(1) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+      -webkit-transform: rotate(-225deg);
+      -moz-transform: rotate(-225deg);
+      -o-transform: rotate(-225deg);
+      transform: rotate(-225deg);
+    }
+  }
 }
 
 .cbp-popup-wrap {
@@ -465,8 +610,17 @@ a {
   }
   &.cbp-popup-singlePage {
     .cbp-popup-content {
-      margin-top: initial;
-      width: 70%;
+      font-family: $apercu;
+      margin-top: 0;
+      width: 100%;
+      @include breakpoint($screen-xs) {
+        width: 75%;
+        margin-top: 30px;
+      }
+      @include breakpoint($screen-sm) {
+        margin-top: initial;
+      }
+
     }
     .cbp-popup-navigation-wrap {
       position: initial;
@@ -477,16 +631,44 @@ a {
     .cbp-popup-navigation {
       position: inherit;
       .cbp-popup-close {
-        top: 157px;
-        right: 5%;
+//        &:before {
+//          content: '\00d7';
+//          vertical-align: top;
+//          line-height: 21px;
+//        }
+        font-size: 45px;
+        background: none;
+        top: 0;
+        right: 0;
         left: inherit;
         bottom: inherit;
         background-position: -93px -183px;
         z-index: 1;
+        @include breakpoint($screen-xs) {
+          right: 5%;
+          top: 22px;
+        }
+        @include breakpoint($screen-sm) {
+          top: 157px;
+          right: 5%;
+        }
       }
       .cbp-popup-next {
         @include breakpoint($screen-xs) {
           right: 5%
+        }
+//        &:hover {
+//          &:before {
+//            transition: all 300ms;
+//            @include breakpoint($screen-xs) {
+//              transform: translate(5px,0);
+//            }
+//          }
+//        }
+        &:before {
+          transition: all 300ms;
+          content: "\f105";
+          display: block;
         }
         left: inherit;
         right: 0;
@@ -498,13 +680,23 @@ a {
         -webkit-font-smoothing: antialiased;
         font-size: 40px;
         color: #000;
-        &:before {
-          content: "\f105";
-        }
       }
       .cbp-popup-prev {
         @include breakpoint($screen-xs) {
           left: 5%;
+        }
+//        &:hover {
+//          &:before {
+//            transition: all 300ms;
+//            @include breakpoint($screen-xs) {
+//              transform: translate(-5px,0);
+//            }
+//          }
+//        }
+        &:before {
+          transition: all 300ms;
+          content: "\f105";
+          display: block;
         }
 //        background: url("../img/cbp-sprite.png") no-repeat scroll 0 -92px rgba(#ccc, 1);
         left: 0;
@@ -522,18 +714,35 @@ a {
       }
     }
     .cbp-l-project-desc-text {
+      font-family: $apercu;
       color: #000;
-      margin-top: 20px;
+      width: 75%;
+      margin: 20px auto 0;
+      @include breakpoint($screen-xs) {
+        width: 100%;;
+      }
       @include breakpoint($screen-sm) {
         margin-top: 0;
       }
       h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-family: $apercu;
         font-weight: 600;
         margin-top: 0;
+        margin-bottom: 20px;
+        @include breakpoint($screen-xs) {
+          font-size: 3.4rem;
+        }
       }
       p {
-        font-size: 18px;
+        font-size: 1.9rem;
         font-weight: 600;
+        margin-bottom: 0.5rem;
+        @include breakpoint($screen-xs) {
+          font-size: 2rem;
+          margin-bottom: 0.8rem;
+        }
       }
       a {
         text-decoration: underline;
@@ -543,28 +752,28 @@ a {
         }
       }
     }
+
     .social {
+      width: 75%;
+      margin: 50px auto 20px;
+      @include breakpoint($screen-xs) {
+        width: 100%;;
+      }
       a {
         color: #000;
         &:hover {
           color: #000;
         }
       }
-    }
-    .social {
-      margin-top: 20px;
-      @include breakpoint($screen-sm){
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
       .icons {
-        margin-bottom: 20px;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
         a {
           display: inline-block;
-          margin-right: 10px;
+          margin-right: 3%;
           i {
-            font-size: 30px;
+            font-size: 2rem;
+            margin-right: 1rem;
           }
         }
       }
@@ -572,7 +781,9 @@ a {
         display: inline-block;
         color: #07510a;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 1.2rem;
+        line-height: 15px;
+        max-width: 250px;
         &:hover {
           color: #07510a;
         }

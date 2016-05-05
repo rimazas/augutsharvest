@@ -31,7 +31,7 @@ $(function(){
         singlePageDelegate: '.cbp-singlePage',
         singlePageAnimation: 'fade',
         singlePageDeeplinking: true,
-        singlePageStickyNavigation: true,
+        singlePageStickyNavigation: false,
         singlePageCounter: '<div class="cbp-popup-singlePage-counter">{{current}} of {{total}}</div>',
         singlePageCallback: function(url, element) {
             // to update singlePage content use the following method: this.updateSinglePage(yourContent)
@@ -45,6 +45,9 @@ $(function(){
             })
                 .done(function(result) {
                     t.updateSinglePage(result);
+                    $('.cbp-popup-navigation div').attr('title','');
+                    $('.cbp-popup-close').html('<i class="close" data-action="close"><span data-action="close"></span><span data-action="close"></span></i>');
+                    console.log(element);
                 })
                 .fail(function() {
                     t.updateSinglePage('AJAX Error! Please refresh the page!');
@@ -64,11 +67,17 @@ $(function(){
         scrolling();
     });
 
+    $('.scroll, .cbp-filter-item').on('click', function() {
+        $("html, body").animate({ scrollTop: $("#top").offset().top }, 300, "easeOutQuad" );
+        $(this).removeClass('inactive');
+        console.log('click');
+    });
+
     function scrolling() {
         var scroll = $(window).scrollTop();
         var menuHeight = $('.menu-wrapper').height();
         $('.placeholder').css('height', menuHeight);
-        if (scroll > 190) {
+        if (scroll > 172) {
             $('.menu-wrapper').addClass('fixed');
             $('.placeholder').show();
         } else {
